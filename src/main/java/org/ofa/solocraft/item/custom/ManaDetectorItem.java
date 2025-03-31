@@ -6,15 +6,34 @@ import net.minecraft.network.chat.Component;
 import net.minecraft.world.InteractionResult;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.Item;
+import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.item.TooltipFlag;
 import net.minecraft.world.item.context.UseOnContext;
+import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.state.BlockState;
+import org.jetbrains.annotations.Nullable;
 import org.ofa.solocraft.block.ModBlocks;
+import org.ofa.solocraft.util.ModTags;
+
+import java.util.List;
 
 public class ManaDetectorItem extends Item {
     public ManaDetectorItem(Properties pProperties) {
         super(pProperties);
+    }
+
+    @Override
+    public void appendHoverText(ItemStack pStack,
+                                @Nullable Level pLevel,
+                                List<Component> pTooltipComponents,
+                                TooltipFlag pIsAdvanced) {
+        String tooltipKey = String.format("%s.tooltip", this.getDescriptionId());
+
+        pTooltipComponents.add(Component.translatable(tooltipKey));
+
+        super.appendHoverText(pStack, pLevel, pTooltipComponents, pIsAdvanced);
     }
 
     @Override
@@ -59,9 +78,6 @@ public class ManaDetectorItem extends Item {
     }
 
     private boolean isValuableBlock(BlockState state) {
-        return state.is(ModBlocks.SMALL_MANA_CRYSTAL_BUD.get())
-                || state.is(ModBlocks.MEDIUM_MANA_CRYSTAL_BUD.get())
-                || state.is(ModBlocks.LARGE_MANA_CRYSTAL_BUD.get())
-                || state.is(ModBlocks.MANA_CRYSTAL_BLOCK.get());
+        return state.is(ModTags.Blocks.MANA_INFUSED);
     }
 }

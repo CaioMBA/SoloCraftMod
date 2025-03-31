@@ -8,9 +8,10 @@
   "block.solocraft.medium_mana_crystal_bud": "Medium Mana Crystal Bud",
   "block.solocraft.large_mana_crystal_bud": "Large Mana Crystal Bud",
   "block.solocraft.mana_detection_orb": "Mana Detection Orb",
-
+  "block.solocraft.mana_detection_orb.tooltip": "Detects player mana levels when clicked",
 
   "item.solocraft.mana_detector": "Mana Detector",
+  "item.solocraft.mana_detector.tooltip": "Detects mana crystals beneath you.",
   "item.solocraft.small_mana_crystal": "Small Mana Crystal",
   "item.solocraft.medium_mana_crystal": "Medium Mana Crystal",
   "item.solocraft.large_mana_crystal": "Large Mana Crystal",
