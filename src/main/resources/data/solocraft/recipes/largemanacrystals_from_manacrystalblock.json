@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "solocraft:mana_crystal_block"
+    }
+  ],
+    "result": {
+        "item": "solocraft:large_mana_crystal",
+        "count": 9
+    }
+}

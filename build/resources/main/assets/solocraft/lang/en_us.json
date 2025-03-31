@@ -1,0 +1,12 @@
+{
+  "creativetab.crystals_tab": "Solo Craft Crystals",
+
+  "block.solocraft.mana_crystal_block": "Mana Crystal Block",
+  "block.solocraft.small_mana_crystal_bud": "Small Mana Crystal Bud",
+  "block.solocraft.medium_mana_crystal_bud": "Medium Mana Crystal Bud",
+  "block.solocraft.large_mana_crystal_bud": "Large Mana Crystal Bud",
+
+  "item.solocraft.small_mana_crystal": "Small Mana Crystal",
+  "item.solocraft.medium_mana_crystal": "Medium Mana Crystal",
+  "item.solocraft.large_mana_crystal": "Large Mana Crystal"
+}
