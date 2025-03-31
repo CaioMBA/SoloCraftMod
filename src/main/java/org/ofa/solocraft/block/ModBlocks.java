@@ -13,6 +13,7 @@ import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
 import org.ofa.solocraft.SolocraftMod;
+import org.ofa.solocraft.block.custom.ManaDetectionOrbBlock;
 import org.ofa.solocraft.item.ModItems;
 
 import java.util.function.Supplier;
@@ -52,6 +53,12 @@ public class ModBlocks {
                             .requiresCorrectToolForDrops(),
                             UniformInt.of(1,12)
                     ));
+
+    public static final RegistryObject<Block> MANA_DETECTION_ORB =
+            registerBlock("mana_detection_orb",
+                    () -> new ManaDetectionOrbBlock(BlockBehaviour.Properties
+                            .copy(Blocks.DIAMOND_BLOCK)
+                            .sound(SoundType.AMETHYST)));
 
     private static <T extends Block> RegistryObject<T> registerBlock(String name, Supplier<T> block) {
         RegistryObject<T> blockObject = BLOCKS.register(name, block);

@@ -23,13 +23,36 @@ public class ModCreativeModeTabs {
                                 output.accept(ModItems.SMALL_MANA_CRYSTAL.get());
                                 output.accept(ModItems.MEDIUM_MANA_CRYSTAL.get());
                                 output.accept(ModItems.LARGE_MANA_CRYSTAL.get());
+                                output.accept(ModItems.MANA_DETECTOR.get());
 
                                 output.accept(ModBlocks.MANA_CRYSTAL_BLOCK.get());
                                 output.accept(ModBlocks.SMALL_MANA_CRYSTAL_BUD.get());
                                 output.accept(ModBlocks.MEDIUM_MANA_CRYSTAL_BUD.get());
                                 output.accept(ModBlocks.LARGE_MANA_CRYSTAL_BUD.get());
+                                output.accept(ModBlocks.MANA_DETECTION_ORB.get());
                             })
                             .build());
+
+    public static final RegistryObject<CreativeModeTab> FOOD_TAB =
+            CREATIVE_MODE_TABS.register("food_tab",
+                    () -> CreativeModeTab.builder()
+                            .title(Component.translatable("creativetab.food_tab"))
+                            .icon(() -> new ItemStack(ModItems.STRAWBERRY.get()))
+                            .displayItems((itemDisplayParameters, output) ->{
+                                output.accept(ModItems.STRAWBERRY.get());
+                            })
+                            .build());
+
+    public static final RegistryObject<CreativeModeTab> MAGIC_TAB =
+            CREATIVE_MODE_TABS.register("magic_tab",
+                    () -> CreativeModeTab.builder()
+                            .title(Component.translatable("creativetab.magic_tab"))
+                            .icon(() -> new ItemStack(ModItems.ORB_OF_AVARICE.get()))
+                            .displayItems((itemDisplayParameters, output) ->{
+                                output.accept(ModItems.ORB_OF_AVARICE.get());
+                            })
+                            .build());
+
 
     public static void register(IEventBus eventBus) {
         CREATIVE_MODE_TABS.register(eventBus);
