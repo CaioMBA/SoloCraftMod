@@ -1,0 +1,4 @@
+// 1.20.1	2025-03-31T22:14:06.308797	Tags for minecraft:block mod id solocraft
+4fd01af81d8ebd4c95ed9e920d754800cf6ff533 data/minecraft/tags/blocks/mineable/pickaxe.json
+4fd01af81d8ebd4c95ed9e920d754800cf6ff533 data/minecraft/tags/blocks/needs_iron_tool.json
+4fd01af81d8ebd4c95ed9e920d754800cf6ff533 data/solocraft/tags/blocks/mana_infused.json

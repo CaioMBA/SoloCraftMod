@@ -1,0 +1,6 @@
+// 1.20.1	2025-03-31T22:14:06.30679	Loot Tables
+3fe85fadac896649fa34c468016f5b8bd53c98ca data/solocraft/loot_tables/blocks/large_mana_crystal_bud.json
+eb108742e7a72c8810ba6000fb705b74a442a138 data/solocraft/loot_tables/blocks/mana_crystal_block.json
+2c0d266c0ad4317c46720050becde502b900b72e data/solocraft/loot_tables/blocks/mana_detection_orb.json
+95c780d92695d99d7744695013fd50823a2e6869 data/solocraft/loot_tables/blocks/medium_mana_crystal_bud.json
+c97251380de2e17a0adf4cfa4cf2726d85e49df0 data/solocraft/loot_tables/blocks/small_mana_crystal_bud.json

@@ -1,6 +1,0 @@
-{
-  "parent": "minecraft:block/cross",
-    "textures": {
-        "cross": "solocraft:block/small_mana_crystal_bud"
-    }
-}

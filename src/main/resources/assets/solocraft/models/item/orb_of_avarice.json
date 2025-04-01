@@ -1,6 +1,0 @@
-{
-  "parent": "item/generated",
-    "textures": {
-        "layer0": "solocraft:item/orb_of_avarice"
-    }
-}

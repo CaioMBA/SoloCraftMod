@@ -12,6 +12,10 @@ import org.ofa.solocraft.item.custom.ManaDetectorItem;
 public class ModItems {
     public static final DeferredRegister<Item> ITEMS = DeferredRegister.create(ForgeRegistries.ITEMS, SolocraftMod.MOD_ID);
 
+    public static final RegistryObject<Item> MANA_CRYSTAL_DUST =
+            ITEMS.register("mana_crystal_dust", () -> new Item(new Item.Properties()));
+
+
     public static final RegistryObject<Item> SMALL_MANA_CRYSTAL =
             ITEMS.register("small_mana_crystal", () -> new Item(new Item.Properties()));
 

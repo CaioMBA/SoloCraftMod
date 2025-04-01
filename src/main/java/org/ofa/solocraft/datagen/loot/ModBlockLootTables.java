@@ -17,7 +17,7 @@ import org.ofa.solocraft.item.ModItems;
 import java.util.Set;
 
 public class ModBlockLootTables extends BlockLootSubProvider {
-    protected ModBlockLootTables() {
+    public ModBlockLootTables() {
         super(Set.of(), FeatureFlags.REGISTRY.allFlags());
     }
 
@@ -46,9 +46,9 @@ public class ModBlockLootTables extends BlockLootSubProvider {
 
     }
 
-    protected  LootTable.Builder createSimpleOreDrops(Block block, Item item, float min, float max){
-        return createSilkTouchDispatchTable(block,
-                this.applyExplosionDecay(block,
+    protected LootTable.Builder createSimpleOreDrops(Block pBlock, Item item, float min, float max) {
+        return createSilkTouchDispatchTable(pBlock,
+                this.applyExplosionDecay(pBlock,
                         LootItem.lootTableItem(item)
                                 .apply(SetItemCountFunction.setCount(UniformGenerator.between(min, max)))
                                 .apply(ApplyBonusCount.addOreBonusCount(Enchantments.BLOCK_FORTUNE))));

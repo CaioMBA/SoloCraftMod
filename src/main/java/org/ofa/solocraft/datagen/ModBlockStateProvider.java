@@ -17,9 +17,14 @@ public class ModBlockStateProvider extends BlockStateProvider {
     protected void registerStatesAndModels() {
         blockWithItem(ModBlocks.MANA_CRYSTAL_BLOCK);
         blockWithItem(ModBlocks.MANA_DETECTION_ORB);
+
+        //supposed to be a cross shape
+        blockWithItem(ModBlocks.SMALL_MANA_CRYSTAL_BUD);
+        blockWithItem(ModBlocks.MEDIUM_MANA_CRYSTAL_BUD);
+        blockWithItem(ModBlocks.LARGE_MANA_CRYSTAL_BUD);
     }
 
-    private void blockWithItem(RegistryObject<Block> block) {
-        simpleBlockWithItem(block.get(), cubeAll(block.get()));
+    private void blockWithItem(RegistryObject<Block> blockRegistryObject) {
+        simpleBlockWithItem(blockRegistryObject.get(), cubeAll(blockRegistryObject.get()));
     }
 }

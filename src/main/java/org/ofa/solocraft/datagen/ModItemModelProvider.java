@@ -21,6 +21,7 @@ public class ModItemModelProvider extends ItemModelProvider {
 
         simpleItem(ModItems.MANA_DETECTOR);
         simpleItem(ModItems.ORB_OF_AVARICE);
+        simpleItem(ModItems.MANA_CRYSTAL_DUST);
         simpleItem(ModItems.SMALL_MANA_CRYSTAL);
         simpleItem(ModItems.MEDIUM_MANA_CRYSTAL);
         simpleItem(ModItems.LARGE_MANA_CRYSTAL);
@@ -29,6 +30,6 @@ public class ModItemModelProvider extends ItemModelProvider {
     private ItemModelBuilder simpleItem(RegistryObject<Item> item) {
         return withExistingParent(item.getId().getPath(),
                 new ResourceLocation("item/generated")).texture("layer0",
-                new ResourceLocation(SolocraftMod.MOD_ID, "item/" + item.getId().getPath()));
+                new ResourceLocation(SolocraftMod.MOD_ID,"item/" + item.getId().getPath()));
     }
 }

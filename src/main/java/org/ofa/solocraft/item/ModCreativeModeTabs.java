@@ -20,6 +20,7 @@ public class ModCreativeModeTabs {
                             .title(Component.translatable("creativetab.crystals_tab"))
                             .icon(() -> new ItemStack(ModItems.SMALL_MANA_CRYSTAL.get()))
                             .displayItems((itemDisplayParameters, output) ->{
+                                output.accept(ModItems.MANA_CRYSTAL_DUST.get());
                                 output.accept(ModItems.SMALL_MANA_CRYSTAL.get());
                                 output.accept(ModItems.MEDIUM_MANA_CRYSTAL.get());
                                 output.accept(ModItems.LARGE_MANA_CRYSTAL.get());

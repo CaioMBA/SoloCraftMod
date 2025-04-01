@@ -1,6 +1,0 @@
-{
-  "parent": "minecraft:block/cube_all",
-    "textures": {
-        "all": "solocraft:block/mana_detection_orb"
-    }
-}
