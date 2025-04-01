@@ -40,5 +40,14 @@ public class ModBlockTagProvider extends BlockTagsProvider {
                         ModBlocks.SMALL_MANA_CRYSTAL_BUD.get(),
                         ModBlocks.MEDIUM_MANA_CRYSTAL_BUD.get(),
                         ModBlocks.LARGE_MANA_CRYSTAL_BUD.get());
+
+        this.tag(BlockTags.FENCES)
+                .add(ModBlocks.MANA_CRYSTAL_FENCE.get());
+
+        this.tag(BlockTags.FENCE_GATES)
+                .add(ModBlocks.MANA_CRYSTAL_FENCE_GATE.get());
+
+        this.tag(BlockTags.WALLS)
+                .add(ModBlocks.MANA_CRYSTAL_WALL.get());
     }
 }

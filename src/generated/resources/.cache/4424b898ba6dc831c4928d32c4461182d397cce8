@@ -1,4 +1,7 @@
-// 1.20.1	2025-03-31T22:14:06.308797	Tags for minecraft:block mod id solocraft
+// 1.20.1	2025-03-31T23:38:39.3807397	Tags for minecraft:block mod id solocraft
+c8b97a7d12cfbf99e7a049ab483b379771b1740c data/minecraft/tags/blocks/fences.json
+3beb7125c99a3a2c06f71dc9c03f0c2459fae2cc data/minecraft/tags/blocks/fence_gates.json
 4fd01af81d8ebd4c95ed9e920d754800cf6ff533 data/minecraft/tags/blocks/mineable/pickaxe.json
 4fd01af81d8ebd4c95ed9e920d754800cf6ff533 data/minecraft/tags/blocks/needs_iron_tool.json
+ad41d7ae1635ff1ff1b21a35a34ea20e7600fbf0 data/minecraft/tags/blocks/walls.json
 4fd01af81d8ebd4c95ed9e920d754800cf6ff533 data/solocraft/tags/blocks/mana_infused.json

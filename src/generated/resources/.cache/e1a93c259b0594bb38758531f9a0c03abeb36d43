@@ -1,6 +1,15 @@
-// 1.20.1	2025-03-31T22:14:06.3052847	Item Models: solocraft
+// 1.20.1	2025-03-31T23:55:22.0347163	Item Models: solocraft
 ced8295500ab05f2b7ee88abced3317aedb7bcf7 assets/solocraft/models/item/large_mana_crystal.json
+653c6b5786946ed361eb5b2c0f54d545703d49f2 assets/solocraft/models/item/mana_crystal_button.json
+be6334812bd453ac7c0736b47592cda27b5cdeaf assets/solocraft/models/item/mana_crystal_door.json
 8cec57cb0a4a193ac6ac93b61b7a905b311b2db5 assets/solocraft/models/item/mana_crystal_dust.json
+08e39fa687364e1aa6c7067e16ccb14492f51360 assets/solocraft/models/item/mana_crystal_fence.json
+6a5b7721bde7fda2761679c2a1dadbf20866e47f assets/solocraft/models/item/mana_crystal_fence_gate.json
+4e86ec7291110ed5691341b05d0056c8d7c2d90f assets/solocraft/models/item/mana_crystal_pressure_plate.json
+a5baabcb9a39d697be1bf9fa5968c84e527ae392 assets/solocraft/models/item/mana_crystal_slab.json
+46ab0a262c05322d1ab44f372ef45e8ceac95db4 assets/solocraft/models/item/mana_crystal_stairs.json
+8ef96a7b7dff32c2da647282a1991385f88ec605 assets/solocraft/models/item/mana_crystal_trapdoor.json
+eee4294f02760e554d7ad9a9424c8a4fd6db13f1 assets/solocraft/models/item/mana_crystal_wall.json
 8a2d4e250c9d2342a1eb63f4ab583a539bca6073 assets/solocraft/models/item/mana_detector.json
 077505c59290e4b61155044ff8920fff64b0b74d assets/solocraft/models/item/medium_mana_crystal.json
 7f768a0ae5d9e638ae601799a73419bb002f09c4 assets/solocraft/models/item/orb_of_avarice.json

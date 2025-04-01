@@ -14,6 +14,27 @@ public class ModCreativeModeTabs {
     public static final DeferredRegister<CreativeModeTab> CREATIVE_MODE_TABS =
             DeferredRegister.create(Registries.CREATIVE_MODE_TAB, SolocraftMod.MOD_ID);
 
+    public static final RegistryObject<CreativeModeTab> BLOCKS_TAB =
+            CREATIVE_MODE_TABS.register("blocks_tab",
+                    () -> CreativeModeTab.builder()
+                            .title(Component.translatable("creativetab.blocks_tab"))
+                            .icon(() -> new ItemStack(ModBlocks.MANA_CRYSTAL_BLOCK.get()))
+                            .displayItems((itemDisplayParameters, output) ->{
+                                output.accept(ModBlocks.MANA_CRYSTAL_BLOCK.get());
+                                output.accept(ModBlocks.MANA_DETECTION_ORB.get());
+                                output.accept(ModBlocks.MANA_CRYSTAL_STAIRS.get());
+                                output.accept(ModBlocks.MANA_CRYSTAL_SLAB.get());
+                                output.accept(ModBlocks.MANA_CRYSTAL_BUTTON.get());
+                                output.accept(ModBlocks.MANA_CRYSTAL_PRESSURE_PLATE.get());
+                                output.accept(ModBlocks.MANA_CRYSTAL_FENCE.get());
+                                output.accept(ModBlocks.MANA_CRYSTAL_FENCE_GATE.get());
+                                output.accept(ModBlocks.MANA_CRYSTAL_WALL.get());
+                                output.accept(ModBlocks.MANA_CRYSTAL_DOOR.get());
+                                output.accept(ModBlocks.MANA_CRYSTAL_TRAPDOOR.get());
+                            })
+                            .build());
+
+
     public static final RegistryObject<CreativeModeTab> CRYSTALS_TAB =
             CREATIVE_MODE_TABS.register("crystals_tab",
                     () -> CreativeModeTab.builder()
@@ -26,11 +47,10 @@ public class ModCreativeModeTabs {
                                 output.accept(ModItems.LARGE_MANA_CRYSTAL.get());
                                 output.accept(ModItems.MANA_DETECTOR.get());
 
-                                output.accept(ModBlocks.MANA_CRYSTAL_BLOCK.get());
+
                                 output.accept(ModBlocks.SMALL_MANA_CRYSTAL_BUD.get());
                                 output.accept(ModBlocks.MEDIUM_MANA_CRYSTAL_BUD.get());
                                 output.accept(ModBlocks.LARGE_MANA_CRYSTAL_BUD.get());
-                                output.accept(ModBlocks.MANA_DETECTION_ORB.get());
                             })
                             .build());
 

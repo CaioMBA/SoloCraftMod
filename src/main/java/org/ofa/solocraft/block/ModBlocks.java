@@ -1,13 +1,13 @@
 package org.ofa.solocraft.block;
 
+import net.minecraft.sounds.SoundEvent;
+import net.minecraft.sounds.SoundEvents;
 import net.minecraft.util.valueproviders.UniformInt;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
-import net.minecraft.world.level.block.Block;
-import net.minecraft.world.level.block.Blocks;
-import net.minecraft.world.level.block.DropExperienceBlock;
-import net.minecraft.world.level.block.SoundType;
+import net.minecraft.world.level.block.*;
 import net.minecraft.world.level.block.state.BlockBehaviour;
+import net.minecraft.world.level.block.state.properties.BlockSetType;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
@@ -28,12 +28,78 @@ public class ModBlocks {
                     .copy(Blocks.DIAMOND_BLOCK)
                     .sound(SoundType.AMETHYST)));
 
+    public static final RegistryObject<Block> MANA_CRYSTAL_STAIRS =
+            registerBlock("mana_crystal_stairs",
+                    () -> new StairBlock(()-> ModBlocks.MANA_CRYSTAL_BLOCK.get().defaultBlockState(),
+                            BlockBehaviour.Properties
+                            .copy(Blocks.DIAMOND_BLOCK)
+                            .sound(SoundType.AMETHYST)));
+
+    public static final RegistryObject<Block> MANA_CRYSTAL_SLAB =
+            registerBlock("mana_crystal_slab",
+                    () -> new SlabBlock(BlockBehaviour.Properties
+                            .copy(Blocks.DIAMOND_BLOCK)
+                            .sound(SoundType.AMETHYST)));
+
+    public static final RegistryObject<Block> MANA_CRYSTAL_BUTTON =
+            registerBlock("mana_crystal_button",
+                    () -> new ButtonBlock(BlockBehaviour.Properties.copy(Blocks.STONE_BUTTON),
+                            BlockSetType.IRON,
+                            10,
+                            true));
+
+    public static final RegistryObject<Block> MANA_CRYSTAL_PRESSURE_PLATE =
+            registerBlock("mana_crystal_pressure_plate",
+                    () -> new PressurePlateBlock(PressurePlateBlock.Sensitivity.MOBS,
+                            BlockBehaviour.Properties
+                                    .copy(Blocks.DIAMOND_BLOCK)
+                                    .sound(SoundType.AMETHYST),
+                            BlockSetType.IRON
+                            ));
+
+    public static final RegistryObject<Block> MANA_CRYSTAL_FENCE =
+            registerBlock("mana_crystal_fence",
+                    () -> new FenceBlock(BlockBehaviour.Properties
+                            .copy(Blocks.DIAMOND_BLOCK)
+                            .sound(SoundType.AMETHYST)));
+
+    public static final RegistryObject<Block> MANA_CRYSTAL_FENCE_GATE =
+            registerBlock("mana_crystal_fence_gate",
+                    () -> new FenceGateBlock(BlockBehaviour.Properties
+                            .copy(Blocks.DIAMOND_BLOCK)
+                            .sound(SoundType.AMETHYST),
+                            SoundEvents.CHAIN_BREAK,
+                            SoundEvents.ANVIL_BREAK));
+
+    public static final RegistryObject<Block> MANA_CRYSTAL_WALL =
+            registerBlock("mana_crystal_wall",
+                    () -> new WallBlock(BlockBehaviour.Properties
+                            .copy(Blocks.DIAMOND_BLOCK)
+                            .sound(SoundType.AMETHYST)));
+
+    public static final RegistryObject<Block> MANA_CRYSTAL_DOOR =
+            registerBlock("mana_crystal_door",
+                    () -> new DoorBlock(BlockBehaviour.Properties
+                            .copy(Blocks.DIAMOND_BLOCK)
+                            .sound(SoundType.AMETHYST)
+                            .noOcclusion(),
+                            BlockSetType.STONE));
+
+    public static final RegistryObject<Block> MANA_CRYSTAL_TRAPDOOR =
+            registerBlock("mana_crystal_trapdoor",
+                    () -> new TrapDoorBlock(BlockBehaviour.Properties
+                            .copy(Blocks.DIAMOND_BLOCK)
+                            .sound(SoundType.AMETHYST)
+                            .noOcclusion(),
+                            BlockSetType.STONE));
+
     public static final RegistryObject<Block> SMALL_MANA_CRYSTAL_BUD =
             registerBlock("small_mana_crystal_bud",
                     () -> new DropExperienceBlock(BlockBehaviour.Properties
                             .copy(Blocks.SMALL_AMETHYST_BUD)
                             .strength(1.0F)
-                            .requiresCorrectToolForDrops(),
+                            .requiresCorrectToolForDrops()
+                            .noOcclusion(),
                             UniformInt.of(1,4)
                     ));
     public static final RegistryObject<Block> MEDIUM_MANA_CRYSTAL_BUD =
@@ -41,7 +107,8 @@ public class ModBlocks {
                     () -> new DropExperienceBlock(BlockBehaviour.Properties
                             .copy(Blocks.MEDIUM_AMETHYST_BUD)
                             .strength(1.5F)
-                            .requiresCorrectToolForDrops(),
+                            .requiresCorrectToolForDrops()
+                            .noOcclusion(),
                             UniformInt.of(1,8)
                     ));
 
@@ -50,7 +117,8 @@ public class ModBlocks {
                     () -> new DropExperienceBlock(BlockBehaviour.Properties
                             .copy(Blocks.LARGE_AMETHYST_BUD)
                             .strength(2F)
-                            .requiresCorrectToolForDrops(),
+                            .requiresCorrectToolForDrops()
+                            .noOcclusion(),
                             UniformInt.of(1,12)
                     ));
 

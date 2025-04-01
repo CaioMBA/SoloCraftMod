@@ -95,5 +95,11 @@
     },
     "done": true
   },
+  "solocraft:recipes/misc/large_mana_crystal": {
+    "criteria": {
+      "has_mana_crystal_block": "2025-03-31 23:57:42 -0300"
+    },
+    "done": true
+  },
   "DataVersion": 3465
 }

@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "solocraft:block/mana_crystal_slab"
+    },
+    "type=double": {
+      "model": "solocraft:block/mana_crystal_block"
+    },
+    "type=top": {
+      "model": "solocraft:block/mana_crystal_slab_top"
+    }
+  }
+}
