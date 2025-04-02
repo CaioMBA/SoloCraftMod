@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:item/handheld",
+  "textures": {
+    "layer0": "solocraft:item/mana_crystal_sword"
+  }
+}

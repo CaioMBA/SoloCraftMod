@@ -21,25 +21,35 @@ public class ModBlockTagProvider extends BlockTagsProvider {
     @Override
     protected void addTags(HolderLookup.Provider provider) {
         this.tag(ModTags.Blocks.MANA_INFUSED)
-                .add(ModBlocks.MANA_CRYSTAL_BLOCK.get(),
+                .add(
+                        ModBlocks.MANA_CRYSTAL_BLOCK.get(),
                         ModBlocks.MANA_DETECTION_ORB.get(),
                         ModBlocks.SMALL_MANA_CRYSTAL_BUD.get(),
                         ModBlocks.MEDIUM_MANA_CRYSTAL_BUD.get(),
-                        ModBlocks.LARGE_MANA_CRYSTAL_BUD.get());
+                        ModBlocks.LARGE_MANA_CRYSTAL_BUD.get()
+                );
 
         this.tag(BlockTags.MINEABLE_WITH_PICKAXE)
-                .add(ModBlocks.MANA_CRYSTAL_BLOCK.get(),
+                .add(
+                        ModBlocks.MANA_CRYSTAL_BLOCK.get(),
                         ModBlocks.MANA_DETECTION_ORB.get(),
                         ModBlocks.SMALL_MANA_CRYSTAL_BUD.get(),
                         ModBlocks.MEDIUM_MANA_CRYSTAL_BUD.get(),
-                        ModBlocks.LARGE_MANA_CRYSTAL_BUD.get());
+                        ModBlocks.LARGE_MANA_CRYSTAL_BUD.get()
+                );
 
         this.tag(BlockTags.NEEDS_IRON_TOOL)
-                .add(ModBlocks.MANA_CRYSTAL_BLOCK.get(),
-                        ModBlocks.MANA_DETECTION_ORB.get(),
+                .add(
+                        ModBlocks.MANA_CRYSTAL_BLOCK.get(),
                         ModBlocks.SMALL_MANA_CRYSTAL_BUD.get(),
                         ModBlocks.MEDIUM_MANA_CRYSTAL_BUD.get(),
-                        ModBlocks.LARGE_MANA_CRYSTAL_BUD.get());
+                        ModBlocks.LARGE_MANA_CRYSTAL_BUD.get()
+                );
+
+        this.tag(ModTags.Blocks.NEEDS_MANA_CRYSTAL_TOOL)
+                .add(
+                        ModBlocks.MANA_DETECTION_ORB.get()
+                );
 
         this.tag(BlockTags.FENCES)
                 .add(ModBlocks.MANA_CRYSTAL_FENCE.get());

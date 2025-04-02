@@ -101,5 +101,29 @@
     },
     "done": true
   },
+  "solocraft:recipes/misc/mana_crystal_dust_from_smelting_large_mana_crystal": {
+    "criteria": {
+      "has_large_mana_crystal": "2025-04-02 00:38:33 -0300"
+    },
+    "done": true
+  },
+  "solocraft:recipes/misc/mana_crystal_block": {
+    "criteria": {
+      "has_large_mana_crystal": "2025-04-02 00:38:33 -0300"
+    },
+    "done": true
+  },
+  "solocraft:recipes/misc/mana_crystal_dust_from_smelting_small_mana_crystal": {
+    "criteria": {
+      "has_small_mana_crystal": "2025-04-02 00:38:36 -0300"
+    },
+    "done": true
+  },
+  "solocraft:recipes/misc/mana_crystal_dust_from_smelting_medium_mana_crystal": {
+    "criteria": {
+      "has_medium_mana_crystal": "2025-04-02 00:38:37 -0300"
+    },
+    "done": true
+  },
   "DataVersion": 3465
 }

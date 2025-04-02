@@ -45,7 +45,6 @@ public class ModCreativeModeTabs {
                                 output.accept(ModItems.SMALL_MANA_CRYSTAL.get());
                                 output.accept(ModItems.MEDIUM_MANA_CRYSTAL.get());
                                 output.accept(ModItems.LARGE_MANA_CRYSTAL.get());
-                                output.accept(ModItems.MANA_DETECTOR.get());
 
 
                                 output.accept(ModBlocks.SMALL_MANA_CRYSTAL_BUD.get());
@@ -71,6 +70,13 @@ public class ModCreativeModeTabs {
                             .icon(() -> new ItemStack(ModItems.ORB_OF_AVARICE.get()))
                             .displayItems((itemDisplayParameters, output) ->{
                                 output.accept(ModItems.ORB_OF_AVARICE.get());
+                                output.accept(ModItems.MANA_CRYSTAL_STAFF.get());
+                                output.accept(ModItems.MANA_DETECTOR.get());
+                                output.accept(ModItems.MANA_CRYSTAL_SWORD.get());
+                                output.accept(ModItems.MANA_CRYSTAL_PICKAXE.get());
+                                output.accept(ModItems.MANA_CRYSTAL_AXE.get());
+                                output.accept(ModItems.MANA_CRYSTAL_SHOVEL.get());
+                                output.accept(ModItems.MANA_CRYSTAL_HOE.get());
                             })
                             .build());
 

@@ -1,4 +1,5 @@
 {
+  "creativetab.blocks_tab": "Solo Craft: Blocks",
   "creativetab.crystals_tab": "Solo Craft: Crystals",
   "creativetab.food_tab": "Solo Craft: Food",
   "creativetab.magic_tab": "Solo Craft: Magic Items",
@@ -21,6 +22,12 @@
 
   "item.solocraft.mana_detector": "Mana Detector",
   "item.solocraft.mana_detector.tooltip": "Detects mana crystals beneath you.",
+  "item.solocraft.mana_crystal_sword": "Mana Crystal Sword",
+  "item.solocraft.mana_crystal_pickaxe": "Mana Crystal Pickaxe",
+  "item.solocraft.mana_crystal_axe": "Mana Crystal Axe",
+  "item.solocraft.mana_crystal_shovel": "Mana Crystal Shovel",
+  "item.solocraft.mana_crystal_hoe": "Mana Crystal Hoe",
+
   "item.solocraft.mana_crystal_dust": "Mana Crystal Dust",
   "item.solocraft.small_mana_crystal": "Small Mana Crystal",
   "item.solocraft.medium_mana_crystal": "Medium Mana Crystal",
