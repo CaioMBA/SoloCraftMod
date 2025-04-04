@@ -20,6 +20,7 @@ import net.minecraftforge.registries.ForgeRegistries;
 import org.ofa.solocraft.block.ModBlocks;
 import org.ofa.solocraft.item.ModCreativeModeTabs;
 import org.ofa.solocraft.item.ModItems;
+import org.ofa.solocraft.loot.ModLootModifiers;
 import org.slf4j.Logger;
 
 // The value here should match an entry in the META-INF/mods.toml file
@@ -36,6 +37,7 @@ public class SolocraftMod {
         ModCreativeModeTabs.register(modEventBus);
         ModItems.ITEMS.register(modEventBus);
         ModBlocks.BLOCKS.register(modEventBus);
+        ModLootModifiers.register(modEventBus);
 
         modEventBus.addListener(this::commonSetup);
 
