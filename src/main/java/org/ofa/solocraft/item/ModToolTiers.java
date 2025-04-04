@@ -20,8 +20,8 @@ public class ModToolTiers {
                     4.0F,
                     25,
                     ModTags.Blocks.NEEDS_MANA_CRYSTAL_TOOL,
-                    () -> Ingredient.of(ModItems.LARGE_MANA_CRYSTAL.get())),
-            new ResourceLocation(SolocraftMod.MOD_ID,"large_mana_crystal"),
+                    () -> Ingredient.of(ModItems.MANA_CRYSTAL.get())),
+            new ResourceLocation(SolocraftMod.MOD_ID,"mana_crystal"),
             List.of(Tiers.NETHERITE),
             List.of());
 }

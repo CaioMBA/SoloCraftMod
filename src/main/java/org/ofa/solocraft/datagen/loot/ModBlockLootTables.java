@@ -42,21 +42,27 @@ public class ModBlockLootTables extends BlockLootSubProvider {
 
         this.add(ModBlocks.SMALL_MANA_CRYSTAL_BUD.get(),
                 block->createSimpleOreDrops(ModBlocks.SMALL_MANA_CRYSTAL_BUD.get(),
-                        ModItems.SMALL_MANA_CRYSTAL.get(),
+                        ModItems.MANA_CRYSTAL_SHARD.get(),
                         1.0F,
-                        5.0F));
+                        3.0F));
 
         this.add(ModBlocks.MEDIUM_MANA_CRYSTAL_BUD.get(),
                 block->createSimpleOreDrops(ModBlocks.MEDIUM_MANA_CRYSTAL_BUD.get(),
-                        ModItems.SMALL_MANA_CRYSTAL.get(),
-                        1.0F,
-                        5.0F));
+                        ModItems.MANA_CRYSTAL_SHARD.get(),
+                        3.0F,
+                        6.0F));
 
         this.add(ModBlocks.LARGE_MANA_CRYSTAL_BUD.get(),
                 block->createSimpleOreDrops(ModBlocks.LARGE_MANA_CRYSTAL_BUD.get(),
-                        ModItems.SMALL_MANA_CRYSTAL.get(),
+                        ModItems.MANA_CRYSTAL_SHARD.get(),
+                        6.0F,
+                        9.0F));
+
+        this.add(ModBlocks.MANA_CRYSTAL_CLUSTER.get(),
+                block->createSimpleOreDrops(ModBlocks.MANA_CRYSTAL_CLUSTER.get(),
+                        ModItems.MANA_CRYSTAL.get(),
                         1.0F,
-                        5.0F));
+                        3.0F));
 
     }
 

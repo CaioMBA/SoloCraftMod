@@ -11,10 +11,8 @@ import net.minecraft.world.item.TooltipFlag;
 import net.minecraft.world.item.context.UseOnContext;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.Block;
-import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.state.BlockState;
 import org.jetbrains.annotations.Nullable;
-import org.ofa.solocraft.block.ModBlocks;
 import org.ofa.solocraft.util.ModTags;
 
 import java.util.List;
@@ -47,10 +45,10 @@ public class ManaDetectorItem extends Item {
                 BlockPos checkPos = new BlockPos(pos.getX(), y, pos.getZ());
                 BlockState state = pContext.getLevel().getBlockState(checkPos);
 
-                if (isValuableBlock(state)) {
+                if (state.is(ModTags.Blocks.MANA_INFUSED)) {
                     outputValuableCoordinates(checkPos, player, state.getBlock());
                     found = true;
-                    break; // Stop after first found
+                    break;
                 }
             }
             if(!found){
@@ -75,9 +73,5 @@ public class ManaDetectorItem extends Item {
                 ==============================================\s""",
                 I18n.get(block.getDescriptionId()), blockPos.getX(), blockPos.getY(), blockPos.getZ());
         player.sendSystemMessage(Component.literal(message));
-    }
-
-    private boolean isValuableBlock(BlockState state) {
-        return state.is(ModTags.Blocks.MANA_INFUSED);
     }
 }

@@ -13,9 +13,18 @@ import org.ofa.solocraft.block.ModBlocks;
 import org.ofa.solocraft.item.ModItems;
 
 import java.util.List;
+import java.util.Map;
 import java.util.function.Consumer;
 
 public class ModRecipeProvider extends RecipeProvider implements IConditionBuilder {
+    private static final Map<RecipeSerializer<?>, String> COOKING_SUFFIXES = Map.of(
+            RecipeSerializer.SMELTING_RECIPE, "from_smelting",
+            RecipeSerializer.BLASTING_RECIPE, "from_blasting",
+            RecipeSerializer.CAMPFIRE_COOKING_RECIPE, "from_campfire",
+            RecipeSerializer.SMOKING_RECIPE, "from_smoking"
+    );
+
+
     public ModRecipeProvider(PackOutput pOutput) {
         super(pOutput);
     }
@@ -25,28 +34,51 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
         oreCooking(
                 pWriter,
                 RecipeSerializer.SMELTING_RECIPE,
-                List.of(ModItems.SMALL_MANA_CRYSTAL.get(),
-                        ModItems.MEDIUM_MANA_CRYSTAL.get(),
-                        ModItems.LARGE_MANA_CRYSTAL.get()),
+                List.of(ModItems.MANA_CRYSTAL_SHARD.get()),
                 RecipeCategory.MISC,
                 ModItems.MANA_CRYSTAL_DUST.get(),
                 0.25F,
                 200,
                 "mana_crystal");
 
-        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.MANA_CRYSTAL_BLOCK.get())
+        oreCooking(
+                pWriter,
+                RecipeSerializer.BLASTING_RECIPE,
+                List.of(ModItems.MANA_CRYSTAL_SHARD.get()),
+                RecipeCategory.MISC,
+                ModItems.MANA_CRYSTAL_DUST.get(),
+                0.25F,
+                100,
+                "mana_crystal");
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModItems.MANA_CRYSTAL.get())
                 .pattern("MMM")
                 .pattern("MMM")
                 .pattern("MMM")
-                .define('M', ModItems.LARGE_MANA_CRYSTAL.get())
-                .unlockedBy(getHasName(ModItems.LARGE_MANA_CRYSTAL.get()), has(ModItems.LARGE_MANA_CRYSTAL.get()))
+                .define('M', ModItems.MANA_CRYSTAL_SHARD.get())
+                .unlockedBy(getHasName(ModItems.MANA_CRYSTAL_SHARD.get()), has(ModItems.MANA_CRYSTAL_SHARD.get()))
+                .save(pWriter, new ResourceLocation(SolocraftMod.MOD_ID, "mana_crystal_from_shards"));
+
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, ModItems.MANA_CRYSTAL_SHARD.get(), 9)
+                .requires(ModItems.MANA_CRYSTAL.get())
+                .unlockedBy(getHasName(ModItems.MANA_CRYSTAL.get()), has(ModItems.MANA_CRYSTAL.get()))
+                .save(pWriter, new ResourceLocation(SolocraftMod.MOD_ID, "mana_crystal_shards_from_crystal"));
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.MANA_CRYSTAL_BLOCK.get())
+                .pattern("MMM")
+                .pattern("MMM")
+                .pattern("MMM")
+                .define('M', ModItems.MANA_CRYSTAL.get())
+                .unlockedBy(getHasName(ModItems.MANA_CRYSTAL.get()), has(ModItems.MANA_CRYSTAL.get()))
                 .save(pWriter);
 
-        ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, ModItems.LARGE_MANA_CRYSTAL.get())
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, ModItems.MANA_CRYSTAL.get(), 9)
                 .requires(ModBlocks.MANA_CRYSTAL_BLOCK.get())
                 .unlockedBy(getHasName(ModBlocks.MANA_CRYSTAL_BLOCK.get()), has(ModBlocks.MANA_CRYSTAL_BLOCK.get()))
-                .save(pWriter);
+                .save(pWriter, new ResourceLocation(SolocraftMod.MOD_ID, "mana_crystal_from_block"));
     }
+
+
 
     protected static void oreCooking(
             Consumer<FinishedRecipe> recipeConsumer,
@@ -58,7 +90,12 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
             int cookingTime,
             String group
     ) {
-        final String suffix = serializer == RecipeSerializer.BLASTING_RECIPE ? "from_blasting" : "from_smelting";
+
+        String suffix = COOKING_SUFFIXES.getOrDefault(serializer, "unknown");
+
+        if (suffix.equals("unknown")) {
+            throw new IllegalStateException("Unexpected recipe serializer: " + serializer);
+        }
 
         for (ItemLike ingredient : ingredients) {
             SimpleCookingRecipeBuilder

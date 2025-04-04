@@ -1,9 +1,9 @@
 {
   "type": "minecraft:crafting_shaped",
-  "category": "misc",
+  "category": "building",
   "key": {
     "M": {
-      "item": "solocraft:large_mana_crystal"
+      "item": "solocraft:mana_crystal"
     }
   },
   "pattern": [

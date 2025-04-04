@@ -3,6 +3,16 @@
     "solocraft:mana_crystal_block",
     "solocraft:small_mana_crystal_bud",
     "solocraft:medium_mana_crystal_bud",
-    "solocraft:large_mana_crystal_bud"
+    "solocraft:large_mana_crystal_bud",
+    "solocraft:mana_crystal_cluster",
+    "solocraft:mana_crystal_fence",
+    "solocraft:mana_crystal_fence_gate",
+    "solocraft:mana_crystal_wall",
+    "solocraft:mana_crystal_door",
+    "solocraft:mana_crystal_trapdoor",
+    "solocraft:mana_crystal_pressure_plate",
+    "solocraft:mana_crystal_button",
+    "solocraft:mana_crystal_slab",
+    "solocraft:mana_crystal_stairs"
   ]
 }

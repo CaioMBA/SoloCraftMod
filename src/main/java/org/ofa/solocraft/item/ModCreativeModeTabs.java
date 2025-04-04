@@ -39,17 +39,17 @@ public class ModCreativeModeTabs {
             CREATIVE_MODE_TABS.register("crystals_tab",
                     () -> CreativeModeTab.builder()
                             .title(Component.translatable("creativetab.crystals_tab"))
-                            .icon(() -> new ItemStack(ModItems.SMALL_MANA_CRYSTAL.get()))
+                            .icon(() -> new ItemStack(ModItems.MANA_CRYSTAL.get()))
                             .displayItems((itemDisplayParameters, output) ->{
                                 output.accept(ModItems.MANA_CRYSTAL_DUST.get());
-                                output.accept(ModItems.SMALL_MANA_CRYSTAL.get());
-                                output.accept(ModItems.MEDIUM_MANA_CRYSTAL.get());
-                                output.accept(ModItems.LARGE_MANA_CRYSTAL.get());
+                                output.accept(ModItems.MANA_CRYSTAL_SHARD.get());
+                                output.accept(ModItems.MANA_CRYSTAL.get());
 
 
                                 output.accept(ModBlocks.SMALL_MANA_CRYSTAL_BUD.get());
                                 output.accept(ModBlocks.MEDIUM_MANA_CRYSTAL_BUD.get());
                                 output.accept(ModBlocks.LARGE_MANA_CRYSTAL_BUD.get());
+                                output.accept(ModBlocks.MANA_CRYSTAL_CLUSTER.get());
                             })
                             .build());
 
@@ -63,11 +63,11 @@ public class ModCreativeModeTabs {
                             })
                             .build());
 
-    public static final RegistryObject<CreativeModeTab> MAGIC_TAB =
-            CREATIVE_MODE_TABS.register("magic_tab",
+    public static final RegistryObject<CreativeModeTab> TOOLS_TAB =
+            CREATIVE_MODE_TABS.register("tools_tab",
                     () -> CreativeModeTab.builder()
-                            .title(Component.translatable("creativetab.magic_tab"))
-                            .icon(() -> new ItemStack(ModItems.ORB_OF_AVARICE.get()))
+                            .title(Component.translatable("creativetab.tools_tab"))
+                            .icon(() -> new ItemStack(ModItems.MANA_CRYSTAL_STAFF.get()))
                             .displayItems((itemDisplayParameters, output) ->{
                                 output.accept(ModItems.ORB_OF_AVARICE.get());
                                 output.accept(ModItems.MANA_CRYSTAL_STAFF.get());
@@ -77,6 +77,19 @@ public class ModCreativeModeTabs {
                                 output.accept(ModItems.MANA_CRYSTAL_AXE.get());
                                 output.accept(ModItems.MANA_CRYSTAL_SHOVEL.get());
                                 output.accept(ModItems.MANA_CRYSTAL_HOE.get());
+                            })
+                            .build());
+
+    public static final RegistryObject<CreativeModeTab> EQUIPMENT_TAB =
+            CREATIVE_MODE_TABS.register("equipment_tab",
+                    () -> CreativeModeTab.builder()
+                            .title(Component.translatable("creativetab.equipment_tab"))
+                            .icon(() -> new ItemStack(ModItems.MANA_CRYSTAL_CHESTPLATE.get()))
+                            .displayItems((itemDisplayParameters, output) ->{
+                                output.accept(ModItems.MANA_CRYSTAL_HELMET.get());
+                                output.accept(ModItems.MANA_CRYSTAL_CHESTPLATE.get());
+                                output.accept(ModItems.MANA_CRYSTAL_LEGGINGS.get());
+                                output.accept(ModItems.MANA_CRYSTAL_BOOTS.get());
                             })
                             .build());
 

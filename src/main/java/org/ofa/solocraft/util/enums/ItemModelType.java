@@ -9,4 +9,5 @@ public enum ItemModelType {
     BUTTON,
     WALL,
     HANDHELD,
+    ARMOR
 }

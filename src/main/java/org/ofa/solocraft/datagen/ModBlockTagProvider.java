@@ -3,7 +3,6 @@ package org.ofa.solocraft.datagen;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.data.PackOutput;
 import net.minecraft.tags.BlockTags;
-import net.minecraftforge.common.Tags;
 import net.minecraftforge.common.data.BlockTagsProvider;
 import net.minecraftforge.common.data.ExistingFileHelper;
 import org.jetbrains.annotations.Nullable;
@@ -26,7 +25,8 @@ public class ModBlockTagProvider extends BlockTagsProvider {
                         ModBlocks.MANA_DETECTION_ORB.get(),
                         ModBlocks.SMALL_MANA_CRYSTAL_BUD.get(),
                         ModBlocks.MEDIUM_MANA_CRYSTAL_BUD.get(),
-                        ModBlocks.LARGE_MANA_CRYSTAL_BUD.get()
+                        ModBlocks.LARGE_MANA_CRYSTAL_BUD.get(),
+                        ModBlocks.MANA_CRYSTAL_CLUSTER.get()
                 );
 
         this.tag(BlockTags.MINEABLE_WITH_PICKAXE)
@@ -35,7 +35,17 @@ public class ModBlockTagProvider extends BlockTagsProvider {
                         ModBlocks.MANA_DETECTION_ORB.get(),
                         ModBlocks.SMALL_MANA_CRYSTAL_BUD.get(),
                         ModBlocks.MEDIUM_MANA_CRYSTAL_BUD.get(),
-                        ModBlocks.LARGE_MANA_CRYSTAL_BUD.get()
+                        ModBlocks.LARGE_MANA_CRYSTAL_BUD.get(),
+                        ModBlocks.MANA_CRYSTAL_CLUSTER.get(),
+                        ModBlocks.MANA_CRYSTAL_FENCE.get(),
+                        ModBlocks.MANA_CRYSTAL_FENCE_GATE.get(),
+                        ModBlocks.MANA_CRYSTAL_WALL.get(),
+                        ModBlocks.MANA_CRYSTAL_DOOR.get(),
+                        ModBlocks.MANA_CRYSTAL_TRAPDOOR.get(),
+                        ModBlocks.MANA_CRYSTAL_PRESSURE_PLATE.get(),
+                        ModBlocks.MANA_CRYSTAL_BUTTON.get(),
+                        ModBlocks.MANA_CRYSTAL_SLAB.get(),
+                        ModBlocks.MANA_CRYSTAL_STAIRS.get()
                 );
 
         this.tag(BlockTags.NEEDS_IRON_TOOL)
@@ -43,7 +53,17 @@ public class ModBlockTagProvider extends BlockTagsProvider {
                         ModBlocks.MANA_CRYSTAL_BLOCK.get(),
                         ModBlocks.SMALL_MANA_CRYSTAL_BUD.get(),
                         ModBlocks.MEDIUM_MANA_CRYSTAL_BUD.get(),
-                        ModBlocks.LARGE_MANA_CRYSTAL_BUD.get()
+                        ModBlocks.LARGE_MANA_CRYSTAL_BUD.get(),
+                        ModBlocks.MANA_CRYSTAL_CLUSTER.get(),
+                        ModBlocks.MANA_CRYSTAL_FENCE.get(),
+                        ModBlocks.MANA_CRYSTAL_FENCE_GATE.get(),
+                        ModBlocks.MANA_CRYSTAL_WALL.get(),
+                        ModBlocks.MANA_CRYSTAL_DOOR.get(),
+                        ModBlocks.MANA_CRYSTAL_TRAPDOOR.get(),
+                        ModBlocks.MANA_CRYSTAL_PRESSURE_PLATE.get(),
+                        ModBlocks.MANA_CRYSTAL_BUTTON.get(),
+                        ModBlocks.MANA_CRYSTAL_SLAB.get(),
+                        ModBlocks.MANA_CRYSTAL_STAIRS.get()
                 );
 
         this.tag(ModTags.Blocks.NEEDS_MANA_CRYSTAL_TOOL)

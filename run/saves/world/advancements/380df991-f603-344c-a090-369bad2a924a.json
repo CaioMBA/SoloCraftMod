@@ -95,33 +95,160 @@
     },
     "done": true
   },
-  "solocraft:recipes/misc/large_mana_crystal": {
+  "solocraft:recipes/misc/mana_crystal_from_shards": {
     "criteria": {
-      "has_mana_crystal_block": "2025-03-31 23:57:42 -0300"
+      "has_mana_crystal_shard": "2025-04-03 18:02:02 -0300"
     },
     "done": true
   },
-  "solocraft:recipes/misc/mana_crystal_dust_from_smelting_large_mana_crystal": {
+  "solocraft:recipes/misc/mana_crystal_dust_from_smelting_mana_crystal_shard": {
     "criteria": {
-      "has_large_mana_crystal": "2025-04-02 00:38:33 -0300"
+      "has_mana_crystal_shard": "2025-04-03 18:02:02 -0300"
     },
     "done": true
   },
-  "solocraft:recipes/misc/mana_crystal_block": {
+  "solocraft:recipes/misc/mana_crystal_dust_from_blasting_mana_crystal_shard": {
     "criteria": {
-      "has_large_mana_crystal": "2025-04-02 00:38:33 -0300"
+      "has_mana_crystal_shard": "2025-04-03 18:02:02 -0300"
     },
     "done": true
   },
-  "solocraft:recipes/misc/mana_crystal_dust_from_smelting_small_mana_crystal": {
+  "solocraft:recipes/misc/mana_crystal_from_block": {
     "criteria": {
-      "has_small_mana_crystal": "2025-04-02 00:38:36 -0300"
+      "has_the_recipe": "2025-04-03 18:02:16 -0300"
     },
     "done": true
   },
-  "solocraft:recipes/misc/mana_crystal_dust_from_smelting_medium_mana_crystal": {
+  "solocraft:recipes/misc/mana_crystal_shards_from_crystal": {
     "criteria": {
-      "has_medium_mana_crystal": "2025-04-02 00:38:37 -0300"
+      "has_mana_crystal": "2025-04-03 18:17:09 -0300"
+    },
+    "done": true
+  },
+  "minecraft:recipes/redstone/calibrated_sculk_sensor": {
+    "criteria": {
+      "has_amethyst_shard": "2025-04-03 18:21:08 -0300"
+    },
+    "done": true
+  },
+  "minecraft:recipes/building_blocks/tinted_glass": {
+    "criteria": {
+      "has_amethyst_shard": "2025-04-03 18:21:08 -0300"
+    },
+    "done": true
+  },
+  "minecraft:recipes/tools/spyglass": {
+    "criteria": {
+      "has_amethyst_shard": "2025-04-03 18:21:08 -0300"
+    },
+    "done": true
+  },
+  "minecraft:recipes/building_blocks/amethyst_block": {
+    "criteria": {
+      "has_amethyst_shard": "2025-04-03 18:21:08 -0300"
+    },
+    "done": true
+  },
+  "solocraft:recipes/building_blocks/mana_crystal_block": {
+    "criteria": {
+      "has_mana_crystal": "2025-04-03 21:20:30 -0300"
+    },
+    "done": true
+  },
+  "minecraft:recipes/misc/shaper_armor_trim_smithing_template": {
+    "criteria": {
+      "has_shaper_armor_trim_smithing_template": "2025-04-03 21:21:56 -0300"
+    },
+    "done": true
+  },
+  "minecraft:recipes/misc/shaper_armor_trim_smithing_template_smithing_trim": {
+    "criteria": {
+      "has_smithing_trim_template": "2025-04-03 21:21:56 -0300"
+    },
+    "done": true
+  },
+  "minecraft:recipes/redstone/redstone_torch": {
+    "criteria": {
+      "has_redstone": "2025-04-03 21:22:02 -0300"
+    },
+    "done": true
+  },
+  "minecraft:recipes/tools/clock": {
+    "criteria": {
+      "has_redstone": "2025-04-03 21:22:02 -0300"
+    },
+    "done": true
+  },
+  "minecraft:recipes/redstone/dropper": {
+    "criteria": {
+      "has_redstone": "2025-04-03 21:22:02 -0300"
+    },
+    "done": true
+  },
+  "minecraft:recipes/redstone/redstone_block": {
+    "criteria": {
+      "has_redstone": "2025-04-03 21:22:02 -0300"
+    },
+    "done": true
+  },
+  "minecraft:recipes/redstone/note_block": {
+    "criteria": {
+      "has_redstone": "2025-04-03 21:22:02 -0300"
+    },
+    "done": true
+  },
+  "minecraft:recipes/redstone/target": {
+    "criteria": {
+      "has_redstone": "2025-04-03 21:22:02 -0300"
+    },
+    "done": true
+  },
+  "minecraft:recipes/tools/compass": {
+    "criteria": {
+      "has_redstone": "2025-04-03 21:22:02 -0300"
+    },
+    "done": true
+  },
+  "minecraft:recipes/redstone/piston": {
+    "criteria": {
+      "has_redstone": "2025-04-03 21:22:02 -0300"
+    },
+    "done": true
+  },
+  "minecraft:adventure/trim_with_any_armor_pattern": {
+    "criteria": {
+      "armor_trimmed_minecraft:shaper_armor_trim_smithing_template_smithing_trim": "2025-04-03 21:22:08 -0300"
+    },
+    "done": true
+  },
+  "minecraft:recipes/misc/ward_armor_trim_smithing_template_smithing_trim": {
+    "criteria": {
+      "has_smithing_trim_template": "2025-04-03 21:45:49 -0300"
+    },
+    "done": true
+  },
+  "minecraft:recipes/misc/ward_armor_trim_smithing_template": {
+    "criteria": {
+      "has_ward_armor_trim_smithing_template": "2025-04-03 21:45:49 -0300"
+    },
+    "done": true
+  },
+  "minecraft:adventure/trim_with_all_exclusive_armor_patterns": {
+    "criteria": {
+      "armor_trimmed_minecraft:vex_armor_trim_smithing_template_smithing_trim": "2025-04-03 22:34:50 -0300",
+      "armor_trimmed_minecraft:ward_armor_trim_smithing_template_smithing_trim": "2025-04-03 21:46:00 -0300"
+    },
+    "done": false
+  },
+  "minecraft:recipes/misc/vex_armor_trim_smithing_template_smithing_trim": {
+    "criteria": {
+      "has_smithing_trim_template": "2025-04-03 22:34:47 -0300"
+    },
+    "done": true
+  },
+  "minecraft:recipes/misc/vex_armor_trim_smithing_template": {
+    "criteria": {
+      "has_vex_armor_trim_smithing_template": "2025-04-03 22:34:47 -0300"
     },
     "done": true
   },

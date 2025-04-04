@@ -13,8 +13,10 @@ import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
 import org.ofa.solocraft.SolocraftMod;
+import org.ofa.solocraft.block.custom.ManaCrystalBudBlock;
 import org.ofa.solocraft.block.custom.ManaDetectionOrbBlock;
 import org.ofa.solocraft.item.ModItems;
+import org.ofa.solocraft.util.enums.BudSizeType;
 
 import java.util.function.Supplier;
 
@@ -95,31 +97,45 @@ public class ModBlocks {
 
     public static final RegistryObject<Block> SMALL_MANA_CRYSTAL_BUD =
             registerBlock("small_mana_crystal_bud",
-                    () -> new DropExperienceBlock(BlockBehaviour.Properties
+                    () -> new ManaCrystalBudBlock(BlockBehaviour.Properties
                             .copy(Blocks.SMALL_AMETHYST_BUD)
                             .strength(1.0F)
                             .requiresCorrectToolForDrops()
                             .noOcclusion(),
-                            UniformInt.of(1,4)
+                            UniformInt.of(1,4),
+                            BudSizeType.SMALL
                     ));
     public static final RegistryObject<Block> MEDIUM_MANA_CRYSTAL_BUD =
             registerBlock("medium_mana_crystal_bud",
-                    () -> new DropExperienceBlock(BlockBehaviour.Properties
+                    () -> new ManaCrystalBudBlock(BlockBehaviour.Properties
                             .copy(Blocks.MEDIUM_AMETHYST_BUD)
                             .strength(1.5F)
                             .requiresCorrectToolForDrops()
                             .noOcclusion(),
-                            UniformInt.of(1,8)
+                            UniformInt.of(4,8),
+                            BudSizeType.MEDIUM
                     ));
 
     public static final RegistryObject<Block> LARGE_MANA_CRYSTAL_BUD =
             registerBlock("large_mana_crystal_bud",
-                    () -> new DropExperienceBlock(BlockBehaviour.Properties
+                    () -> new ManaCrystalBudBlock(BlockBehaviour.Properties
                             .copy(Blocks.LARGE_AMETHYST_BUD)
                             .strength(2F)
                             .requiresCorrectToolForDrops()
                             .noOcclusion(),
-                            UniformInt.of(1,12)
+                            UniformInt.of(8,12),
+                            BudSizeType.LARGE
+                    ));
+
+    public static final RegistryObject<Block> MANA_CRYSTAL_CLUSTER =
+            registerBlock("mana_crystal_cluster",
+                    () -> new ManaCrystalBudBlock(BlockBehaviour.Properties
+                            .copy(Blocks.AMETHYST_CLUSTER)
+                            .strength(2.5F)
+                            .requiresCorrectToolForDrops()
+                            .noOcclusion(),
+                            UniformInt.of(12,16),
+                            BudSizeType.CLUSTER
                     ));
 
     public static final RegistryObject<Block> MANA_DETECTION_ORB =

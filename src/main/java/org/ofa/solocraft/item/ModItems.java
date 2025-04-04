@@ -8,6 +8,8 @@ import net.minecraftforge.registries.RegistryObject;
 import org.ofa.solocraft.SolocraftMod;
 import org.ofa.solocraft.item.custom.FuelItem;
 import org.ofa.solocraft.item.custom.ManaDetectorItem;
+import org.ofa.solocraft.item.custom.ModArmorItem;
+import org.ofa.solocraft.util.enums.ModArmorMaterials;
 
 public class ModItems {
     public static final DeferredRegister<Item> ITEMS = DeferredRegister.create(ForgeRegistries.ITEMS, SolocraftMod.MOD_ID);
@@ -15,15 +17,11 @@ public class ModItems {
     public static final RegistryObject<Item> MANA_CRYSTAL_DUST =
             ITEMS.register("mana_crystal_dust", () -> new Item(new Item.Properties()));
 
+    public static final RegistryObject<Item> MANA_CRYSTAL_SHARD =
+            ITEMS.register("mana_crystal_shard", () -> new Item(new Item.Properties()));
 
-    public static final RegistryObject<Item> SMALL_MANA_CRYSTAL =
-            ITEMS.register("small_mana_crystal", () -> new Item(new Item.Properties()));
-
-    public static final RegistryObject<Item> MEDIUM_MANA_CRYSTAL =
-            ITEMS.register("medium_mana_crystal", () -> new Item(new Item.Properties()));
-
-    public static final RegistryObject<Item> LARGE_MANA_CRYSTAL =
-            ITEMS.register("large_mana_crystal", () -> new Item(new Item.Properties()));
+    public static final RegistryObject<Item> MANA_CRYSTAL =
+            ITEMS.register("mana_crystal", () -> new Item(new Item.Properties()));
 
     public static final RegistryObject<Item> STRAWBERRY =
             ITEMS.register("strawberry", () ->
@@ -80,6 +78,31 @@ public class ModItems {
                             ModToolTiers.MANA_CRYSTAL,
                             0,
                             0,
+                            new Item.Properties().stacksTo(1)));
+
+    public static final RegistryObject<Item> MANA_CRYSTAL_HELMET =
+            ITEMS.register("mana_crystal_helmet", () ->
+                    new ModArmorItem(
+                            ModArmorMaterials.MANA_CRYSTAL,
+                            ArmorItem.Type.HELMET,
+                            new Item.Properties().stacksTo(1)));
+    public static final RegistryObject<Item> MANA_CRYSTAL_CHESTPLATE =
+            ITEMS.register("mana_crystal_chestplate", () ->
+                    new ModArmorItem(
+                            ModArmorMaterials.MANA_CRYSTAL,
+                            ArmorItem.Type.CHESTPLATE,
+                            new Item.Properties().stacksTo(1)));
+    public static final RegistryObject<Item> MANA_CRYSTAL_LEGGINGS =
+            ITEMS.register("mana_crystal_leggings", () ->
+                    new ModArmorItem(
+                            ModArmorMaterials.MANA_CRYSTAL,
+                            ArmorItem.Type.LEGGINGS,
+                            new Item.Properties().stacksTo(1)));
+    public static final RegistryObject<Item> MANA_CRYSTAL_BOOTS =
+            ITEMS.register("mana_crystal_boots", () ->
+                    new ModArmorItem(
+                            ModArmorMaterials.MANA_CRYSTAL,
+                            ArmorItem.Type.BOOTS,
                             new Item.Properties().stacksTo(1)));
 
     public static void register(IEventBus eventBus) {

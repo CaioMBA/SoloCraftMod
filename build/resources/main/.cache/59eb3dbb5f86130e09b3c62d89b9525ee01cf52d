@@ -1,7 +1,8 @@
-// 1.20.1	2025-04-02T01:00:24.2294725	Loot Tables
-3fe85fadac896649fa34c468016f5b8bd53c98ca data/solocraft/loot_tables/blocks/large_mana_crystal_bud.json
+// 1.20.1	2025-04-03T17:48:57.7584562	Loot Tables
+799acb2d26fea45525cc41a8a1922b41d874b6ed data/solocraft/loot_tables/blocks/large_mana_crystal_bud.json
 eb108742e7a72c8810ba6000fb705b74a442a138 data/solocraft/loot_tables/blocks/mana_crystal_block.json
 8a73273ba4efe8436091317e183564f9380d63a7 data/solocraft/loot_tables/blocks/mana_crystal_button.json
+65d46bfb5e0bb870b92df488f6d7bcb5ed2ec5e9 data/solocraft/loot_tables/blocks/mana_crystal_cluster.json
 04eb009e4e2659b312c8c4b2bb1631fd70e60d4c data/solocraft/loot_tables/blocks/mana_crystal_door.json
 0a823908260a044cd01b64d2b8311c65b84e9ae9 data/solocraft/loot_tables/blocks/mana_crystal_fence.json
 33e6b158924e3715b1c1a214c6a384dcc420759d data/solocraft/loot_tables/blocks/mana_crystal_fence_gate.json
@@ -11,5 +12,5 @@ eb108742e7a72c8810ba6000fb705b74a442a138 data/solocraft/loot_tables/blocks/mana_
 a8e1ce5b381dcb090c475fd2e662cf9e731fb084 data/solocraft/loot_tables/blocks/mana_crystal_trapdoor.json
 fc4465017968f82536d2051ed0c0a08ee9251bfe data/solocraft/loot_tables/blocks/mana_crystal_wall.json
 2c0d266c0ad4317c46720050becde502b900b72e data/solocraft/loot_tables/blocks/mana_detection_orb.json
-95c780d92695d99d7744695013fd50823a2e6869 data/solocraft/loot_tables/blocks/medium_mana_crystal_bud.json
-c97251380de2e17a0adf4cfa4cf2726d85e49df0 data/solocraft/loot_tables/blocks/small_mana_crystal_bud.json
+45a6082493e02dc44aa7c2c709d0b444865af7ea data/solocraft/loot_tables/blocks/medium_mana_crystal_bud.json
+83379f671e35746f51f6ffeea61b763b69d4f89e data/solocraft/loot_tables/blocks/small_mana_crystal_bud.json
