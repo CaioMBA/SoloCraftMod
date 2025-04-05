@@ -63,7 +63,6 @@ public class ModBlockLootTables extends BlockLootSubProvider {
                         ModItems.MANA_CRYSTAL.get(),
                         1.0F,
                         3.0F));
-
     }
 
     protected LootTable.Builder createSimpleOreDrops(Block pBlock, Item item, float min, float max) {

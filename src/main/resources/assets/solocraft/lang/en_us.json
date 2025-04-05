@@ -4,6 +4,7 @@
   "creativetab.food_tab": "Solo Craft: Food",
   "creativetab.tools_tab": "Solo Craft: Tools",
   "creativetab.equipment_tab": "Solo Craft: Equipment",
+  "creativetab.sound_tab": "Solo Craft: Sounds",
 
   "block.solocraft.mana_crystal_block": "Mana Crystal Block",
   "block.solocraft.mana_crystal_stairs": "Mana Crystal Stairs",
@@ -22,6 +23,7 @@
   "block.solocraft.mana_detection_orb": "Mana Detection Orb",
   "block.solocraft.mana_detection_orb.tooltip": "Detects player mana levels when clicked",
 
+  "item.solocraft.mana_crystal_staff": "Mana Crystal Staff",
   "item.solocraft.mana_detector": "Mana Detector",
   "item.solocraft.mana_detector.tooltip": "Detects mana crystals beneath you.",
   "item.solocraft.mana_crystal_sword": "Mana Crystal Sword",
@@ -39,5 +41,16 @@
   "item.solocraft.mana_crystal": "Mana Crystal",
 
   "item.solocraft.strawberry": "Strawberry",
-  "item.solocraft.orb_of_avarice": "Orb of Avarice"
+  "item.solocraft.strawberry_seeds": "Strawberry Seeds",
+  "item.solocraft.orb_of_avarice": "Orb of Avarice",
+
+  "item.solocraft.aura_farming_music_disc": "Aura Farming Music Disc",
+  "item.solocraft.aura_farming_music_disc.desc": "MXZI - Montagem Tomada | ATLXS - Passo Bem Solto",
+
+  "entity.minecraft.villager.solocraft.hunter_association_secretary": "Hunter's A. Secretary",
+
+  "sounds.solocraft.arise_voice": "ARISE!!!",
+  "sounds.solocraft.okiru_voice": "OKIRU!!!",
+  "sounds.solocraft.mana_detection_orb_scanning": "Scanning Mana Levels...",
+  "sounds.solocraft.aura_farming": "Aura faming sounds"
 }

@@ -93,6 +93,16 @@ public class ModCreativeModeTabs {
                             })
                             .build());
 
+    public static final RegistryObject<CreativeModeTab> SOUND_TAB =
+            CREATIVE_MODE_TABS.register("sound_tab",
+                    () -> CreativeModeTab.builder()
+                            .title(Component.translatable("creativetab.sound_tab"))
+                            .icon(() -> new ItemStack(ModItems.AURA_FARMING_MUSIC_DISC.get()))
+                            .displayItems((itemDisplayParameters, output) ->{
+                                output.accept(ModItems.AURA_FARMING_MUSIC_DISC.get());
+                            })
+                            .build());
+
 
     public static void register(IEventBus eventBus) {
         CREATIVE_MODE_TABS.register(eventBus);

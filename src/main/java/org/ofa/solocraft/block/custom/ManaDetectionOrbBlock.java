@@ -15,6 +15,7 @@ import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.phys.BlockHitResult;
 import org.jetbrains.annotations.Nullable;
+import org.ofa.solocraft.sound.ModSounds;
 
 import java.util.List;
 
@@ -33,7 +34,7 @@ public class ManaDetectionOrbBlock extends Block {
 
         pLevel.playSound(pPlayer,
                         pPos,
-                        SoundEvents.NOTE_BLOCK_BELL.get(),
+                        ModSounds.MANA_DETECTION_ORB_SCANNING.get(),
                         SoundSource.BLOCKS,
                         1.0F,
                         1.0F);

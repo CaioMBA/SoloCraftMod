@@ -3,6 +3,7 @@ package org.ofa.solocraft.item.custom;
 import net.minecraft.client.resources.language.I18n;
 import net.minecraft.core.BlockPos;
 import net.minecraft.network.chat.Component;
+import net.minecraft.sounds.SoundSource;
 import net.minecraft.world.InteractionResult;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.Item;
@@ -13,6 +14,7 @@ import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.state.BlockState;
 import org.jetbrains.annotations.Nullable;
+import org.ofa.solocraft.sound.ModSounds;
 import org.ofa.solocraft.util.ModTags;
 
 import java.util.List;
@@ -48,6 +50,18 @@ public class ManaDetectorItem extends Item {
                 if (state.is(ModTags.Blocks.MANA_INFUSED)) {
                     outputValuableCoordinates(checkPos, player, state.getBlock());
                     found = true;
+
+                    pContext.getLevel().playSeededSound(
+                            null,
+                            pos.getX(),
+                            pos.getY(),
+                            pos.getZ(),
+                            ModSounds.ARISE_VOICE.get(),
+                            SoundSource.BLOCKS,
+                            1f,
+                            1f,
+                            0);
+
                     break;
                 }
             }

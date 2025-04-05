@@ -11,6 +11,7 @@ import net.minecraftforge.common.loot.LootTableIdCondition;
 import org.ofa.solocraft.SolocraftMod;
 import org.ofa.solocraft.item.ModItems;
 import org.ofa.solocraft.loot.AddItemModifier;
+import org.ofa.solocraft.loot.AddSusSandItemModifier;
 
 public class ModGlobalLootModifiersProvider extends GlobalLootModifierProvider {
     public ModGlobalLootModifiersProvider(PackOutput output) {
@@ -32,7 +33,7 @@ public class ModGlobalLootModifiersProvider extends GlobalLootModifierProvider {
                 new AddItemModifier(new LootItemCondition[]{
                         new LootTableIdCondition.Builder(new ResourceLocation("entities/skeleton")).build(),
                         LootItemRandomChanceCondition.randomChance(0.25F).build()
-                }, ModItems.MANA_CRYSTAL_SHARD.get())
+                }, ModItems.MANA_CRYSTAL_DUST.get())
         );
 
         add(
@@ -40,6 +41,13 @@ public class ModGlobalLootModifiersProvider extends GlobalLootModifierProvider {
                 new AddItemModifier(new LootItemCondition[]{
                         new LootTableIdCondition.Builder(new ResourceLocation("chests/jungle_temple")).build(),
                         LootItemRandomChanceCondition.randomChance(0.5F).build()
+                }, ModItems.MANA_CRYSTAL.get())
+        );
+
+        add(
+                "mana_crystal_shard_from_suspicious_sand",
+                new AddSusSandItemModifier(new LootItemCondition[]{
+                        new LootTableIdCondition.Builder(new ResourceLocation("archaeology/desert_pyramid")).build(),
                 }, ModItems.MANA_CRYSTAL_SHARD.get())
         );
 

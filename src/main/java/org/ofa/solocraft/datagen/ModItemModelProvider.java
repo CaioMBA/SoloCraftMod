@@ -43,6 +43,7 @@ public class ModItemModelProvider extends ItemModelProvider {
     @Override
     protected void registerModels() {
         registerItemModel(ModItems.STRAWBERRY, ItemModelType.GENERATED_ITEM);
+        registerItemModel(ModItems.AURA_FARMING_MUSIC_DISC, ItemModelType.GENERATED_ITEM);
 
         registerItemModel(ModItems.MANA_DETECTOR, ItemModelType.GENERATED_ITEM);
         registerItemModel(ModItems.ORB_OF_AVARICE, ItemModelType.GENERATED_ITEM);

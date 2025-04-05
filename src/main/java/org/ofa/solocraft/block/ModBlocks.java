@@ -1,6 +1,5 @@
 package org.ofa.solocraft.block;
 
-import net.minecraft.sounds.SoundEvent;
 import net.minecraft.sounds.SoundEvents;
 import net.minecraft.util.valueproviders.UniformInt;
 import net.minecraft.world.item.BlockItem;
@@ -143,6 +142,7 @@ public class ModBlocks {
                     () -> new ManaDetectionOrbBlock(BlockBehaviour.Properties
                             .copy(Blocks.DIAMOND_BLOCK)
                             .sound(SoundType.AMETHYST)));
+
 
     private static <T extends Block> RegistryObject<T> registerBlock(String name, Supplier<T> block) {
         RegistryObject<T> blockObject = BLOCKS.register(name, block);

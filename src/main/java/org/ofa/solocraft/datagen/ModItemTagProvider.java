@@ -28,5 +28,11 @@ public class ModItemTagProvider extends ItemTagsProvider {
                         ModItems.MANA_CRYSTAL_BOOTS.get()
                 );
 
+        this.tag(ItemTags.MUSIC_DISCS)
+                .add(ModItems.AURA_FARMING_MUSIC_DISC.get());
+
+        this.tag(ItemTags.CREEPER_DROP_MUSIC_DISCS)
+                .add(ModItems.AURA_FARMING_MUSIC_DISC.get());
+
     }
 }

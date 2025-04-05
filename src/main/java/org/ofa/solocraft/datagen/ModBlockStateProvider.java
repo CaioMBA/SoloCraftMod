@@ -81,6 +81,8 @@ public class ModBlockStateProvider extends BlockStateProvider {
                     modLoc("block/" + name),
                     true,
                     "cutout");
+
+            case CROP -> simpleBlockWithItem(b, models().crop(name, blockTexture(b)).renderType("cutout"));
         }
     }
 

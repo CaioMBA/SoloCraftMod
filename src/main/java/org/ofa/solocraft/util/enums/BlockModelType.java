@@ -11,6 +11,7 @@ public enum BlockModelType {
     BUTTON,
     PRESSURE_PLATE,
     DOOR,
-    TRAPDOOR
+    TRAPDOOR,
+    CROP
 }
 
