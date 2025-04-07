@@ -103,6 +103,16 @@ public class ModCreativeModeTabs {
                             })
                             .build());
 
+    public static final RegistryObject<CreativeModeTab> ENTITIES_TAB =
+            CREATIVE_MODE_TABS.register("entities_tab",
+                    () -> CreativeModeTab.builder()
+                            .title(Component.translatable("creativetab.entities_tab"))
+                            .icon(() -> new ItemStack(ModItems.RHINO_SPAWN_EGG.get()))
+                            .displayItems((itemDisplayParameters, output) ->{
+                                output.accept(ModItems.RHINO_SPAWN_EGG.get());
+                            })
+                            .build());
+
 
     public static void register(IEventBus eventBus) {
         CREATIVE_MODE_TABS.register(eventBus);

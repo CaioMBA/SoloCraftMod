@@ -1,11 +1,13 @@
 package org.ofa.solocraft.item;
 
 import net.minecraft.world.item.*;
+import net.minecraftforge.common.ForgeSpawnEggItem;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
 import org.ofa.solocraft.SolocraftMod;
+import org.ofa.solocraft.entity.ModEntities;
 import org.ofa.solocraft.item.custom.FuelItem;
 import org.ofa.solocraft.item.custom.ManaDetectorItem;
 import org.ofa.solocraft.item.custom.ModArmorItem;
@@ -117,6 +119,17 @@ public class ModItems {
                             ModSounds.AURA_FARMING,
                             new Item.Properties().stacksTo(1),
                             2060
+                    )
+            );
+
+    public static final RegistryObject<Item> RHINO_SPAWN_EGG =
+            ITEMS.register(
+                    "rhino_spawn_egg",
+                    () -> new ForgeSpawnEggItem(
+                            ModEntities.RHINO,
+                            0xfe9680,
+                            0xc5d1c6,
+                            new Item.Properties()
                     )
             );
 

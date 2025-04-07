@@ -44,6 +44,7 @@ public class ModItemModelProvider extends ItemModelProvider {
     protected void registerModels() {
         registerItemModel(ModItems.STRAWBERRY, ItemModelType.GENERATED_ITEM);
         registerItemModel(ModItems.AURA_FARMING_MUSIC_DISC, ItemModelType.GENERATED_ITEM);
+        registerItemModel(ModItems.RHINO_SPAWN_EGG, ItemModelType.SPAWN_EGG);
 
         registerItemModel(ModItems.MANA_DETECTOR, ItemModelType.GENERATED_ITEM);
         registerItemModel(ModItems.ORB_OF_AVARICE, ItemModelType.GENERATED_ITEM);
@@ -101,6 +102,7 @@ public class ModItemModelProvider extends ItemModelProvider {
             case HANDHELD -> withExistingParent(name, mcLoc("item/handheld"))
                     .texture("layer0", itemTexture);
             case ARMOR -> trimmedArmorItem(((RegistryObject<Item>)registryObject));
+            case SPAWN_EGG -> withExistingParent(name, mcLoc("item/template_spawn_egg"));
         }
     }
 

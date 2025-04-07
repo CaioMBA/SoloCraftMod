@@ -2,6 +2,7 @@ package org.ofa.solocraft;
 
 import com.mojang.logging.LogUtils;
 import net.minecraft.client.Minecraft;
+import net.minecraft.client.renderer.entity.EntityRenderers;
 import net.minecraft.world.item.CreativeModeTabs;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraftforge.api.distmarker.Dist;
@@ -18,6 +19,8 @@ import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import net.minecraftforge.registries.ForgeRegistries;
 import org.ofa.solocraft.block.ModBlocks;
+import org.ofa.solocraft.entity.ModEntities;
+import org.ofa.solocraft.entity.client.RhinoRenderer;
 import org.ofa.solocraft.item.ModCreativeModeTabs;
 import org.ofa.solocraft.item.ModItems;
 import org.ofa.solocraft.loot.ModLootModifiers;
@@ -47,6 +50,8 @@ public class SolocraftMod {
 
         ModSounds.register(modEventBus);
 
+        ModEntities.register(modEventBus);
+
         modEventBus.addListener(this::commonSetup);
 
         MinecraftForge.EVENT_BUS.register(this);
@@ -72,6 +77,7 @@ public class SolocraftMod {
 
         @SubscribeEvent
         public static void onClientSetup(FMLClientSetupEvent event) {
+            EntityRenderers.register(ModEntities.RHINO.get(), RhinoRenderer::new);
         }
     }
 }

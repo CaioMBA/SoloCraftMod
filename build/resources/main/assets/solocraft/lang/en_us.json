@@ -5,6 +5,7 @@
   "creativetab.tools_tab": "Solo Craft: Tools",
   "creativetab.equipment_tab": "Solo Craft: Equipment",
   "creativetab.sound_tab": "Solo Craft: Sounds",
+  "creativetab.entities_tab": "Solo Craft: Entities",
 
   "block.solocraft.mana_crystal_block": "Mana Crystal Block",
   "block.solocraft.mana_crystal_stairs": "Mana Crystal Stairs",
@@ -43,11 +44,14 @@
   "item.solocraft.strawberry": "Strawberry",
   "item.solocraft.strawberry_seeds": "Strawberry Seeds",
   "item.solocraft.orb_of_avarice": "Orb of Avarice",
+  "item.solocraft.rhino_spawn_egg": "Rhino Spawn Egg",
 
   "item.solocraft.aura_farming_music_disc": "Aura Farming Music Disc",
   "item.solocraft.aura_farming_music_disc.desc": "MXZI - Montagem Tomada | ATLXS - Passo Bem Solto",
 
   "entity.minecraft.villager.solocraft.hunter_association_secretary": "Hunter's A. Secretary",
+
+  "entity.solocraft.rhino": "Rhino",
 
   "sounds.solocraft.arise_voice": "ARISE!!!",
   "sounds.solocraft.okiru_voice": "OKIRU!!!",

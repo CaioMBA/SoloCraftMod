@@ -9,5 +9,6 @@ public enum ItemModelType {
     BUTTON,
     WALL,
     HANDHELD,
-    ARMOR
+    ARMOR,
+    SPAWN_EGG
 }
