@@ -7,13 +7,14 @@ import net.minecraft.client.renderer.entity.MobRenderer;
 import net.minecraft.resources.ResourceLocation;
 import org.jetbrains.annotations.NotNull;
 import org.ofa.solocraft.SolocraftMod;
+import org.ofa.solocraft.entity.ModEntities;
 import org.ofa.solocraft.entity.custom.RhinoEntity;
 
 public class RhinoRenderer extends MobRenderer<RhinoEntity, RhinoModel<RhinoEntity>> {
     public RhinoRenderer(EntityRendererProvider.Context pContext) {
         super(
                 pContext,
-                new RhinoModel<>(pContext.bakeLayer(ModModelLayers.RHINO_LAYER)),
+                new RhinoModel<>(pContext.bakeLayer(ModEntities.getModelLayer(ModEntities.RHINO))),
                 2.0F);
     }
 

@@ -428,5 +428,17 @@
     },
     "done": true
   },
+  "minecraft:recipes/misc/mojang_banner_pattern": {
+    "criteria": {
+      "has_enchanted_golden_apple": "2025-04-08 01:24:57 -0300"
+    },
+    "done": true
+  },
+  "minecraft:husbandry/balanced_diet": {
+    "criteria": {
+      "enchanted_golden_apple": "2025-04-08 01:24:59 -0300"
+    },
+    "done": false
+  },
   "DataVersion": 3465
 }
