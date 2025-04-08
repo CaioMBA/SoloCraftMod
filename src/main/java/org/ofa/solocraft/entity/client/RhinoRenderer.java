@@ -10,11 +10,13 @@ import org.ofa.solocraft.SolocraftMod;
 import org.ofa.solocraft.entity.ModEntities;
 import org.ofa.solocraft.entity.custom.RhinoEntity;
 
+import java.util.Objects;
+
 public class RhinoRenderer extends MobRenderer<RhinoEntity, RhinoModel<RhinoEntity>> {
     public RhinoRenderer(EntityRendererProvider.Context pContext) {
         super(
                 pContext,
-                new RhinoModel<>(pContext.bakeLayer(ModEntities.getModelLayer(ModEntities.RHINO))),
+                new RhinoModel<>(pContext.bakeLayer(Objects.requireNonNull(ModEntities.getModelLayer(ModEntities.RHINO)))),
                 2.0F);
     }
 

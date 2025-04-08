@@ -12,31 +12,33 @@ import net.minecraftforge.registries.RegistryObject;
 import org.ofa.solocraft.SolocraftMod;
 import org.ofa.solocraft.entity.ModEntities;
 
+import java.util.Objects;
+
 @Mod.EventBusSubscriber(modid = SolocraftMod.MOD_ID, bus = Mod.EventBusSubscriber.Bus.MOD, value = Dist.CLIENT)
 public class ModEventBusClientEvents {
     @SubscribeEvent
     public static void RegisterLayer(EntityRenderersEvent.RegisterLayerDefinitions event){
-        ModEntities.MODEL_DEFINITIONS.forEach((entityTypeReg, layerDefinition) -> {
+        ModEntities.ENTITIES.forEach((entityTypeReg, def) -> {
             event.registerLayerDefinition(
-                    ModEntities.getModelLayer(entityTypeReg),
-                    layerDefinition
+                    Objects.requireNonNull(ModEntities.ENTITIES.get(entityTypeReg).clientData()).modelLayer(),
+                    Objects.requireNonNull(ModEntities.ENTITIES.get(entityTypeReg).clientData()).modelDefinition()
             );
         });
     }
 
     @SubscribeEvent
     public static void registerRenderers(EntityRenderersEvent.RegisterRenderers event) {
-        ModEntities.RENDERERS.forEach(ModEventBusClientEvents::registerEntityRenderer);
+        ModEntities.ENTITIES.forEach(ModEventBusClientEvents::registerEntityRenderer);
     }
 
     @SuppressWarnings("unchecked")
     private static <T extends Entity> void registerEntityRenderer(
             RegistryObject<? extends EntityType<?>> entityTypeReg,
-            EntityRendererProvider<?> renderer
+            ModEntities.EntityDefinition<?> def
     ) {
         EntityRenderers.register(
                 (EntityType<T>) entityTypeReg.get(),
-                (EntityRendererProvider<T>) renderer
+                (EntityRendererProvider<T>) Objects.requireNonNull(def.clientData()).renderer()
         );
     }
 }

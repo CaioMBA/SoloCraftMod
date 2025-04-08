@@ -12,8 +12,8 @@ import org.ofa.solocraft.entity.ModEntities;
 public class ModEventBusEvents {
     @SubscribeEvent
     public static void RegisterAttributes(EntityAttributeCreationEvent event) {
-        ModEntities.ATTRIBUTES.forEach((type, supplier) -> {
-            event.put((EntityType<? extends LivingEntity>) type.get(), supplier.get().build());
+        ModEntities.ENTITIES.forEach((type, def) -> {
+            event.put((EntityType<? extends LivingEntity>) type.get(), def.attributes().get().build());
         });
     }
 }
