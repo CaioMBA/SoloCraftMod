@@ -1,6 +1,7 @@
 package org.ofa.solocraft.util.enums;
 
 public enum BlockModelType {
+    ENTITY,
     CUBE_ALL,
     CROSS,
     STAIRS,

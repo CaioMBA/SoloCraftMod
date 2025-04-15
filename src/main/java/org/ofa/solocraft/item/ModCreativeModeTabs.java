@@ -31,6 +31,7 @@ public class ModCreativeModeTabs {
                                 output.accept(ModBlocks.MANA_CRYSTAL_WALL.get());
                                 output.accept(ModBlocks.MANA_CRYSTAL_DOOR.get());
                                 output.accept(ModBlocks.MANA_CRYSTAL_TRAPDOOR.get());
+                                output.accept(ModBlocks.GEM_POLISHING_STATION.get());
                             })
                             .build());
 

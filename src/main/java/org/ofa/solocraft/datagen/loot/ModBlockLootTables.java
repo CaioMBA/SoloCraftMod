@@ -31,6 +31,7 @@ public class ModBlockLootTables extends BlockLootSubProvider {
         this.dropSelf(ModBlocks.MANA_CRYSTAL_FENCE.get());
         this.dropSelf(ModBlocks.MANA_CRYSTAL_FENCE_GATE.get());
         this.dropSelf(ModBlocks.MANA_CRYSTAL_WALL.get());
+        this.dropSelf(ModBlocks.GEM_POLISHING_STATION.get());
 
         this.add(ModBlocks.MANA_CRYSTAL_SLAB.get(),
                 block->createSlabItemTable(ModBlocks.MANA_CRYSTAL_SLAB.get()));

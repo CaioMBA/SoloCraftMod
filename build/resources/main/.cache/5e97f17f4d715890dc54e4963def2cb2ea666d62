@@ -1,4 +1,5 @@
-// 1.20.1	2025-04-03T17:57:50.6607145	Block States: solocraft
+// 1.20.1	2025-04-15T02:36:34.1266052	Block States: solocraft
+1bec84e72c781d7e186385aeba52511ee952feec assets/solocraft/blockstates/gem_polishing_station.json
 9c381257501867952bee3e1699b6747f86fff270 assets/solocraft/blockstates/large_mana_crystal_bud.json
 85dd222429dac85237721cb0b1dc37f0b7a13df6 assets/solocraft/blockstates/mana_crystal_block.json
 178a2e40d08519cebd280e50a9c68466c39c0e10 assets/solocraft/blockstates/mana_crystal_button.json
@@ -46,9 +47,9 @@ a96bed745e6aed2da5701f68aca6f62354fd6af3 assets/solocraft/models/block/mana_crys
 a6295ce3fa0d30918b2243d97a50f677d7cb1f41 assets/solocraft/models/block/mana_crystal_wall_post.json
 2018e9a5eb002d30e03e91e225199be37db11470 assets/solocraft/models/block/mana_crystal_wall_side.json
 55449c8ff5817003f8d14ce6662ad64ed82bbdb3 assets/solocraft/models/block/mana_crystal_wall_side_tall.json
-83b11794145ee530f26ad27d7c58d218ccdd20a0 assets/solocraft/models/block/mana_detection_orb.json
 cf1cadc45686e4f86a490a421b373b4971252069 assets/solocraft/models/block/medium_mana_crystal_bud.json
 b716a73413e999d49b086ae0463f1be277fc9276 assets/solocraft/models/block/small_mana_crystal_bud.json
+085b57ec7524d6ac270d2611dbc082a72ad40c24 assets/solocraft/models/item/gem_polishing_station.json
 30c08767d1c432a2fa311a9d3784afd277bdf3df assets/solocraft/models/item/large_mana_crystal_bud.json
 760e8bde6c870e5480482ec4cb89843f444f0093 assets/solocraft/models/item/mana_crystal_block.json
 469b7f570a1331c85466de8a876f8d3bda85b52e assets/solocraft/models/item/mana_crystal_cluster.json

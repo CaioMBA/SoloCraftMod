@@ -3,6 +3,7 @@ package org.ofa.solocraft.datagen;
 import net.minecraft.data.PackOutput;
 import net.minecraft.world.level.block.*;
 import net.minecraftforge.client.model.generators.BlockStateProvider;
+import net.minecraftforge.client.model.generators.ModelFile;
 import net.minecraftforge.common.data.ExistingFileHelper;
 import net.minecraftforge.registries.RegistryObject;
 import org.ofa.solocraft.SolocraftMod;
@@ -18,13 +19,14 @@ public class ModBlockStateProvider extends BlockStateProvider {
 
     @Override
     protected void registerStatesAndModels() {
-        registerBlockWithItemModel(ModBlocks.MANA_CRYSTAL_BLOCK, BlockModelType.CUBE_ALL, null);
-        registerBlockWithItemModel(ModBlocks.MANA_DETECTION_ORB, BlockModelType.CUBE_ALL, null);
+        registerBlockWithItemModel(ModBlocks.MANA_CRYSTAL_BLOCK, BlockModelType.CUBE_ALL);
+        registerBlockWithItemModel(ModBlocks.MANA_DETECTION_ORB, BlockModelType.ENTITY);
+        registerBlockWithItemModel(ModBlocks.GEM_POLISHING_STATION, BlockModelType.ENTITY);
 
-        registerBlockWithItemModel(ModBlocks.SMALL_MANA_CRYSTAL_BUD, BlockModelType.CROSS, null);
-        registerBlockWithItemModel(ModBlocks.MEDIUM_MANA_CRYSTAL_BUD, BlockModelType.CROSS, null);
-        registerBlockWithItemModel(ModBlocks.LARGE_MANA_CRYSTAL_BUD, BlockModelType.CROSS, null);
-        registerBlockWithItemModel(ModBlocks.MANA_CRYSTAL_CLUSTER, BlockModelType.CROSS, null);
+        registerBlockWithItemModel(ModBlocks.SMALL_MANA_CRYSTAL_BUD, BlockModelType.CROSS);
+        registerBlockWithItemModel(ModBlocks.MEDIUM_MANA_CRYSTAL_BUD, BlockModelType.CROSS);
+        registerBlockWithItemModel(ModBlocks.LARGE_MANA_CRYSTAL_BUD, BlockModelType.CROSS);
+        registerBlockWithItemModel(ModBlocks.MANA_CRYSTAL_CLUSTER, BlockModelType.CROSS);
 
         registerBlockWithItemModel(ModBlocks.MANA_CRYSTAL_STAIRS, BlockModelType.STAIRS, ModBlocks.MANA_CRYSTAL_BLOCK);
         registerBlockWithItemModel(ModBlocks.MANA_CRYSTAL_SLAB, BlockModelType.SLAB, ModBlocks.MANA_CRYSTAL_BLOCK);
@@ -41,21 +43,20 @@ public class ModBlockStateProvider extends BlockStateProvider {
         registerBlockWithItemModel(ModBlocks.MANA_CRYSTAL_TRAPDOOR, BlockModelType.TRAPDOOR, ModBlocks.MANA_CRYSTAL_BLOCK);
     }
 
-    private void blockWithItem(RegistryObject<Block> blockRegistryObject) {
-        simpleBlockWithItem(blockRegistryObject.get(), cubeAll(blockRegistryObject.get()));
-    }
-    private String getPath(RegistryObject<?> ro) {
-        return ro.getId().getPath();
-    }
 
+    private void registerBlockWithItemModel(RegistryObject<Block> block,
+                                            BlockModelType type){
+        registerBlockWithItemModel(block, type, null);
+    }
 
     private void registerBlockWithItemModel(RegistryObject<Block> block,
                                             BlockModelType type,
                                             @Nullable RegistryObject<Block> baseBlock) {
         Block b = block.get();
-        String name = getPath(block);
+        String name = block.getId().getPath();
 
         switch (type) {
+            case ENTITY -> simpleBlockWithItem(b, new ModelFile.UncheckedModelFile(modLoc("block/%s".formatted(name))));
             case CUBE_ALL -> simpleBlockWithItem(b, cubeAll(b));
             case CROSS -> simpleBlockWithItem(b,
                     models().cross(name, blockTexture(b)).renderType("cutout"));
@@ -85,7 +86,4 @@ public class ModBlockStateProvider extends BlockStateProvider {
             case CROP -> simpleBlockWithItem(b, models().crop(name, blockTexture(b)).renderType("cutout"));
         }
     }
-
-
-
 }

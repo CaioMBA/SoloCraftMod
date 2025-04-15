@@ -1,13 +1,6 @@
 package org.ofa.solocraft;
 
 import com.mojang.logging.LogUtils;
-import net.minecraft.client.Minecraft;
-import net.minecraft.client.renderer.entity.EntityRendererProvider;
-import net.minecraft.client.renderer.entity.EntityRenderers;
-import net.minecraft.world.entity.Entity;
-import net.minecraft.world.entity.EntityType;
-import net.minecraft.world.item.CreativeModeTabs;
-import net.minecraft.world.level.block.Blocks;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.event.BuildCreativeModeTabContentsEvent;
@@ -20,14 +13,13 @@ import net.minecraftforge.fml.config.ModConfig;
 import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
 import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
-import net.minecraftforge.registries.ForgeRegistries;
-import net.minecraftforge.registries.RegistryObject;
 import org.ofa.solocraft.block.ModBlocks;
+import org.ofa.solocraft.block.entity.ModBlockEntities;
 import org.ofa.solocraft.entity.ModEntities;
-import org.ofa.solocraft.entity.client.RhinoRenderer;
 import org.ofa.solocraft.item.ModCreativeModeTabs;
 import org.ofa.solocraft.item.ModItems;
 import org.ofa.solocraft.loot.ModLootModifiers;
+import org.ofa.solocraft.screen.ModMenuTypes;
 import org.ofa.solocraft.sound.ModSounds;
 import org.ofa.solocraft.villager.ModVillagers;
 import org.slf4j.Logger;
@@ -44,17 +36,15 @@ public class SolocraftMod {
         IEventBus modEventBus = FMLJavaModLoadingContext.get().getModEventBus();
 
         ModCreativeModeTabs.register(modEventBus);
-        ModItems.ITEMS.register(modEventBus);
-        ModBlocks.BLOCKS.register(modEventBus);
-
+        ModItems.register(modEventBus);
+        ModBlocks.register(modEventBus);
+        ModEntities.register(modEventBus);
+        ModVillagers.register(modEventBus);
+        ModSounds.register(modEventBus);
+        ModBlockEntities.register(modEventBus);
 
         ModLootModifiers.register(modEventBus);
-
-        ModVillagers.register(modEventBus);
-
-        ModSounds.register(modEventBus);
-
-        ModEntities.register(modEventBus);
+        ModMenuTypes.register(modEventBus);
 
         modEventBus.addListener(this::commonSetup);
 

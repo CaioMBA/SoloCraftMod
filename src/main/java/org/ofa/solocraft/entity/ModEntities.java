@@ -26,6 +26,7 @@ public class ModEntities {
     public static final DeferredRegister<EntityType<?>> ENTITY_TYPES
             = DeferredRegister.create(ForgeRegistries.ENTITY_TYPES, SolocraftMod.MOD_ID);
 
+    //region Entity Data Records
     public record ClientEntityData(
             EntityRendererProvider<?> renderer,
             Supplier<LayerDefinition> modelDefinition,
@@ -37,6 +38,7 @@ public class ModEntities {
             Supplier<AttributeSupplier.Builder> attributes,
             @Nullable ClientEntityData clientData
     ) {}
+    //endregion
 
     public static final Map<
             RegistryObject<EntityType<? extends LivingEntity>>,
@@ -50,34 +52,48 @@ public class ModEntities {
             () -> EntityType.Builder.of(RhinoEntity::new, MobCategory.MONSTER)
                     .sized(2.5f, 2.5f)
                     .build( "rhino"),
-            RhinoRenderer::new,
             RhinoEntity::createAttributes,
+            RhinoRenderer::new,
             RhinoModel::createBodyLayer
     );
 
     private static <T extends LivingEntity> RegistryObject<EntityType<T>> registerEntity(
             String name,
             Supplier<EntityType<T>> entitySupplier,
-            EntityRendererProvider<? super T> renderer,
-            Supplier<AttributeSupplier.Builder> attributeSupplier,
-            Supplier<LayerDefinition> layerDefinition
+            Supplier<AttributeSupplier.Builder> attributeSupplier
     ) {
-        RegistryObject<EntityType<T>> reg = ENTITY_TYPES.register(name, entitySupplier);
-        ModelLayerLocation layer = new ModelLayerLocation(
-                new ResourceLocation(SolocraftMod.MOD_ID, "%s_layer".formatted(name)), "main"
-        );
-        ENTITIES.put(
-                (RegistryObject<EntityType<? extends LivingEntity>>) (RegistryObject<?>) reg,
-                new EntityDefinition<>(
+        return registerEntity(
+                name,
                 entitySupplier,
                 attributeSupplier,
-                new ClientEntityData(
-                        renderer,
-                        layerDefinition,
-                        layer
-                )
+                null,
+                null
+        );
+    }
 
-        ));
+    @SuppressWarnings("unchecked")
+    private static <T extends LivingEntity> RegistryObject<EntityType<T>> registerEntity(
+            String name,
+            Supplier<EntityType<T>> entitySupplier,
+            Supplier<AttributeSupplier.Builder> attributeSupplier,
+            @Nullable EntityRendererProvider<? super T> renderer,
+            @Nullable Supplier<LayerDefinition> layerDefinition
+    ) {
+        RegistryObject<EntityType<T>> reg = ENTITY_TYPES.register(name, entitySupplier);
+
+        @Nullable ClientEntityData clientData = (renderer != null && layerDefinition != null)
+                ? new ClientEntityData(
+                renderer,
+                layerDefinition,
+                new ModelLayerLocation(
+                        new ResourceLocation(SolocraftMod.MOD_ID, "%s_layer".formatted(name)),
+                        "main"
+                ))
+                : null;
+
+        ENTITIES.put(
+                (RegistryObject<EntityType<? extends LivingEntity>>) (RegistryObject<?>) reg,
+                new EntityDefinition<>(entitySupplier, attributeSupplier, clientData));
 
         return reg;
     }

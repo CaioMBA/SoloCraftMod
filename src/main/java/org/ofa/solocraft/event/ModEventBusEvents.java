@@ -1,7 +1,5 @@
 package org.ofa.solocraft.event;
 
-import net.minecraft.world.entity.EntityType;
-import net.minecraft.world.entity.LivingEntity;
 import net.minecraftforge.event.entity.EntityAttributeCreationEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
@@ -13,7 +11,7 @@ public class ModEventBusEvents {
     @SubscribeEvent
     public static void RegisterAttributes(EntityAttributeCreationEvent event) {
         ModEntities.ENTITIES.forEach((type, def) -> {
-            event.put((EntityType<? extends LivingEntity>) type.get(), def.attributes().get().build());
+            event.put(type.get(), def.attributes().get().build());
         });
     }
 }

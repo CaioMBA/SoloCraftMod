@@ -1,4 +1,5 @@
-// 1.20.1	2025-04-03T17:48:57.7584562	Loot Tables
+// 1.20.1	2025-04-15T02:31:19.1342697	Loot Tables
+2c561347a4ac8b2f3dc063f31c3860859659b850 data/solocraft/loot_tables/blocks/gem_polishing_station.json
 799acb2d26fea45525cc41a8a1922b41d874b6ed data/solocraft/loot_tables/blocks/large_mana_crystal_bud.json
 eb108742e7a72c8810ba6000fb705b74a442a138 data/solocraft/loot_tables/blocks/mana_crystal_block.json
 8a73273ba4efe8436091317e183564f9380d63a7 data/solocraft/loot_tables/blocks/mana_crystal_button.json

@@ -12,6 +12,7 @@ import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
 import org.ofa.solocraft.SolocraftMod;
+import org.ofa.solocraft.block.custom.GemPolishingStationBlock;
 import org.ofa.solocraft.block.custom.ManaCrystalBudBlock;
 import org.ofa.solocraft.block.custom.ManaDetectionOrbBlock;
 import org.ofa.solocraft.item.ModItems;
@@ -141,18 +142,28 @@ public class ModBlocks {
             registerBlock("mana_detection_orb",
                     () -> new ManaDetectionOrbBlock(BlockBehaviour.Properties
                             .copy(Blocks.DIAMOND_BLOCK)
-                            .sound(SoundType.AMETHYST)));
+                            .sound(SoundType.AMETHYST)
+                            .noOcclusion()
+                    ));
+
+    public static RegistryObject<Block> GEM_POLISHING_STATION =
+            registerBlock("gem_polishing_station",
+                    () -> new GemPolishingStationBlock(BlockBehaviour.Properties
+                            .copy(Blocks.IRON_BLOCK)
+                            .noOcclusion()
+                    )
+            );
 
 
     private static <T extends Block> RegistryObject<T> registerBlock(String name, Supplier<T> block) {
         RegistryObject<T> blockObject = BLOCKS.register(name, block);
-        registerBlockItem(name, blockObject);
+        ModItems.ITEMS.register(
+                name,
+                () -> new BlockItem(
+                        blockObject.get(), new Item.Properties()
+                )
+        );
         return blockObject;
-    }
-
-    private static <T extends Block> RegistryObject<Item> registerBlockItem(String name, RegistryObject<T> block) {
-        return ModItems.ITEMS.register(name,
-                () -> new BlockItem(block.get(), new Item.Properties()));
     }
 
     public static void register(IEventBus eventBus) {

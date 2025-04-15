@@ -1,5 +1,6 @@
 package org.ofa.solocraft.block.custom;
 
+import com.google.common.collect.ImmutableMap;
 import net.minecraft.core.BlockPos;
 import net.minecraft.network.chat.Component;
 import net.minecraft.sounds.SoundEvents;
@@ -14,10 +15,14 @@ import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.phys.BlockHitResult;
+import net.minecraft.world.phys.shapes.CollisionContext;
+import net.minecraft.world.phys.shapes.VoxelShape;
+import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 import org.ofa.solocraft.sound.ModSounds;
 
 import java.util.List;
+import java.util.function.Function;
 
 public class ManaDetectionOrbBlock extends Block {
     public ManaDetectionOrbBlock(Properties pProperties) {
@@ -52,5 +57,13 @@ public class ManaDetectionOrbBlock extends Block {
         pTooltip.add(Component.translatable(tooltipKey));
 
         super.appendHoverText(pStack, pLevel, pTooltip, pFlag);
+    }
+
+    @Override
+    public @NotNull VoxelShape getShape(BlockState pState, BlockGetter pLevel, BlockPos pPos, CollisionContext pContext) {
+        return Block.box(
+                2.5, 2.5, 2.5,   // from (X, Y, Z)
+                13.5, 13.5, 13.5 // to   (X, Y, Z)
+        );
     }
 }

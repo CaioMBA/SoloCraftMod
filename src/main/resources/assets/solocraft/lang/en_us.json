@@ -23,6 +23,7 @@
   "block.solocraft.mana_crystal_cluster": "Mana Crystal Cluster",
   "block.solocraft.mana_detection_orb": "Mana Detection Orb",
   "block.solocraft.mana_detection_orb.tooltip": "Detects player mana levels when clicked",
+  "block.solocraft.gem_polishing_station": "Gem Polishing Station",
 
   "item.solocraft.mana_crystal_staff": "Mana Crystal Staff",
   "item.solocraft.mana_detector": "Mana Detector",
