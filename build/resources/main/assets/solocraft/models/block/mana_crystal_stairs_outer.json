@@ -1,8 +1,0 @@
-{
-  "parent": "minecraft:block/outer_stairs",
-  "textures": {
-    "bottom": "solocraft:block/mana_crystal_block",
-    "side": "solocraft:block/mana_crystal_block",
-    "top": "solocraft:block/mana_crystal_block"
-  }
-}

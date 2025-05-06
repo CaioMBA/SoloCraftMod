@@ -1,6 +1,0 @@
-// 1.20.1	2025-04-03T23:12:30.3724022	Global Loot Modifiers : solocraft
-0ce2c5293e984cfa920df270062f066ac50149f6 data/forge/loot_modifiers/global_loot_modifiers.json
-5fcbc71bd63c0c62db46ec3ed4181ef970330516 data/solocraft/loot_modifiers/mana_crystal_dust_from_skeleton.json
-ff2ecdd000a54bdfa2d63718ff2a792ad8c3665a data/solocraft/loot_modifiers/mana_crystal_from_jungle_temples.json
-55116e2f853ebfa9023c92227d1d8f7858b46ad3 data/solocraft/loot_modifiers/mana_crystal_shard_from_iron_ore.json
-294c99411c3e30b4c49e5390ad7727126e15cf48 data/solocraft/loot_modifiers/mana_crystal_shard_from_suspicious_sand.json
