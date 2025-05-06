@@ -1,16 +1,16 @@
-# Compiled class file
+# ---- Java compiled files ----
 *.class
 
-# Log file
+# ---- Logs ----
 *.log
 
-# BlueJ files
+# ---- BlueJ files ----
 *.ctxt
 
-# Mobile Tools for Java (J2ME)
+# ---- Mobile Tools for Java (J2ME) ----
 .mtj.tmp/
 
-# Package Files #
+# ---- Package files ----
 *.jar
 *.war
 *.nar
@@ -19,6 +19,65 @@
 *.tar.gz
 *.rar
 
-# virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
+# ---- JVM crash logs ----
 hs_err_pid*
 replay_pid*
+
+# ---- IDE Files ----
+# IntelliJ IDEA
+.idea/
+*.iml
+
+# Eclipse
+.project
+.classpath
+.settings/
+
+# VSCode
+.vscode/
+
+# ---- Forge Specific ----
+# Gradle build folders
+/build/
+out/
+
+# ForgeGradle generated folders
+/run/
+run/
+run-client/
+run-server/
+run-data/
+run-gameTestServer/
+run-data-gameTestServer/
+
+# Minecraft specific generated resources
+/src/generated/
+
+# ---- Gradle Wrapper ----
+# Ignore all jars EXCEPT the gradle wrapper jar
+*.jar
+!gradle/wrapper/gradle-wrapper.jar
+
+# Gradle caches (optional if you want cleaner repo clones)
+.gradle/
+!gradle/wrapper/ # Keep the wrapper folder
+
+# ---- OS Specific ----
+# macOS
+.DS_Store
+
+# Windows
+Thumbs.db
+desktop.ini
+
+# Linux
+*~
+
+# ---- Sonar Scanner ----
+.sonar/
+
+# ---- Additional ----
+# Backup files
+*.bak
+*.swp
+*.tmp
