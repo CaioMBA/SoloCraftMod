@@ -14,6 +14,16 @@ plugins {
     id 'idea'
     id 'net.minecraftforge.gradle' version '[6.0.16,6.2)'
     id 'org.parchmentmc.librarian.forgegradle' version '1.+'
+    id "org.sonarqube" version "6.0.1.5171"
+}
+
+sonar {
+    properties {
+        property "sonar.projectKey", "CaioMBA_SoloCraftMod_dee6349d-94c3-46bb-8016-987aa7ccc63a"
+        property "sonar.projectName", "SoloCraftMod"
+        property "sonar.java.source", "17"
+        property "sonar.exclusions", "**/generated/**, **/mixin/**, **/*.refmap.json"
+    }
 }
 
 apply plugin: 'org.spongepowered.mixin'
